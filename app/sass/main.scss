@@ -1,0 +1,21 @@
+// main sass file
+
+// BASE
+@import "base/_mixins";
+@import "base/_variables";
+@import "base/_globals";
+
+// COMPONENTS
+@import "components/_preloader";
+@import "components/_inputs";
+@import "components/_primary-btn";
+@import "components/_logo";
+@import "components/_gradient-bg";
+
+// LAYOUT
+@import "layout/_header";
+@import "layout/_hero";
+@import "layout/_footer";
+
+
+

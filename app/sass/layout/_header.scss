@@ -1,0 +1,148 @@
+.header{
+    background-color: $lightWhite;
+    @include position (fixed, $top: 0);
+    width: 100%;
+    padding: 1.2rem;
+    z-index: 100;
+
+
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.295);
+
+
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+
+
+
+        &__burger{
+
+            position: relative;
+            width: 20px;
+            height: 15px;
+            padding: .5rem;
+            
+            transition: transform 0.3s;
+            cursor: pointer;
+            
+            display: block;
+    
+            &:hover{
+                transform: scale(1.1);
+            }
+    
+            span{
+                position: absolute;
+                left: 0;
+                width: 100%;
+                
+                height: .25rem;
+                
+                display: block;
+                background-color: $primary;
+                border-radius: 12px;
+                transition: all 0.3s;
+    
+    
+                &:nth-child(1){
+                    top: 0;
+    
+                }
+                
+                &:nth-child(2){
+                    top: 5.5px;
+                }
+    
+                &:nth-child(3){
+                    top: 11px;
+                }
+            }
+    
+    
+            // burger clicked
+            &__clicked{
+            
+                span:nth-child(1){
+                    top: 5px;  
+                    transform: rotate(135deg);   
+                }
+        
+                span:nth-child(2){
+                    opacity: 0;
+                    left:-5px;
+                }
+        
+                span:nth-child(3){
+                    top: 5px;  
+                    transform: rotate(-135deg);
+        
+                }
+            }
+    
+    
+    
+            @include respond(phone) {
+                display: none;
+            }
+    
+    
+    
+    
+    
+        }
+
+        &__menu{
+            // este mixin acepta mas argumentos, mas adelante se estableceran
+            
+            @include position(absolute, $top: 4rem, $right: 101%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1rem;
+            width: 100%;
+            
+            background-color: $lightBlack;
+            text-align: center;
+            transition: all 0.3s;
+            opacity: 0;
+            
+           a{
+               color: $white;
+           }
+            a:hover{
+                color: $primary;
+            }
+    
+    
+            @include respond(phone){
+    
+                display: inline;
+                position: static;
+                background: none;
+                width: auto;
+                opacity: 1;
+    
+                a{
+                    color: $lightBlack;
+     
+                    &:not(:last-of-type){
+                        margin-right:2.5rem;
+                    }
+                }
+    
+            }
+    
+    
+    
+        }
+    
+        .menu__active{
+            right: 0;
+        }
+
+
+    }
+}

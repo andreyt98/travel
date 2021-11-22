@@ -8,6 +8,8 @@ html{
     font-size: 62.5%;
 
     scroll-behavior: smooth;
+    white-space: nowrap;
+
 
     @include respond(very-small-phone){
 
@@ -33,7 +35,7 @@ html{
 
 body{
     box-sizing: border-box;
-    padding-top: 5rem;
+    padding-top: 4rem;
 
     
     background-color: $lightWhite;
@@ -43,7 +45,10 @@ body{
 
 a{
     display: inline-block;
-    color: $white;
     text-decoration: none;
+    color: $lightBlack;
 }
 
+img{
+    max-width: 100%;
+}

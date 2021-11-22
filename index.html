@@ -8,7 +8,7 @@
     <link rel="icon" href="img/favicon.svg">
 
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- font awesome icons cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -30,6 +30,120 @@
 </head>
 
     <body>
+
+        <div class="preloader">
+            <div class="preloader__content">
+                <i class="fas fa-location-arrow arrow"></i>
+            </div>
+        </div>
+
+
+        <header class="header">
+            <nav class="nav">
+                <a href="#"class="logo"> <i class="fas fa-location-arrow"></i> Travel</a>
+                <div class="nav__menu">
+                    <a href="#">Home</a>
+                    <a href="#1">Hotels</a>
+                    <a href="#2">Tours</a>
+                </div>
+
+                <div class="nav__burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </header>
+
+
+        <div class="hero">
+            <div class="gradient-bg"></div>
+                <video class="hero__video" autoplay loop muted>
+                        <source src="img/pool.mp4" type="video/mp4">  
+                </video>  
+
+                <div class="hero__header">
+                    <h1>Travel with us and explore the life you always dreamed of</h1>
+                    
+                    <div class="search-bar">
+                        <form action="submit" >
+                            <input type="text" name="search" id="search" placeholder="search a place" class="input">
+                            <input type="button" value="Search" class="btn">
+                        </form>
+                    </div>
+                </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer class="footer">
+
+            <div class="footer__content">
+
+                <div class="info">
+                    <a href="#"class="logo"> <i class="fas fa-location-arrow"></i> Travel</a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+                <div class="contact">
+                    <h2>Contact info</h2>
+                    <p>travel@email.com</p>
+                    <p>+123-456-789</p>
+                    <p>San José, Costa Rica</p>
+                </div>
+
+                <div class="newsletter">
+                    <h2>Newsletter</h2>
+                    <p>get news on incredible offers!</p>
+
+                    <form action="submit" method="post" class="">
+                        <input type="email" name="sub" id="sub" placeholder="Your email" class="input">
+                    </form>
+
+                    <button type="submit" class="btn">Subscribe</button>
+                </div>
+            </div>
+
+            <p class="creator"> Made by Andrey Torrente, 2021. </p>
+
+            <!-- <div class="subscribe-card">
+                <div class="subscribe-card__elements">
+                    
+                    
+                    
+                    <h2>Thank you for subscribing!  <i class="fas fa-check-circle check"></i></h2>
+                    <i class="fas fa-times x"></i>
+                    
+                    <p>
+                        We'll make sure you receive the best offers on the market to discover amazing places!
+                    </p>
+                    
+                    
+                    
+                </div>
+            </div> -->
+                
+        </footer>
+        <!--............-->
+    
+
 
         <!-- swiper js -->
         <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
