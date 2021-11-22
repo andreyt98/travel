@@ -1,0 +1,49 @@
+*, *::after, *::before{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+
+    scroll-behavior: smooth;
+
+    @include respond(very-small-phone){
+
+        font-size: 30%;
+    }
+   
+    @include respond(phone){
+
+        font-size: 60%;
+    }
+
+    @include respond(tab-land) {
+        font-size: 80%; 
+    }
+
+    
+    @include respond(big-desktop) {
+        font-size: 88%; 
+    }
+
+
+}
+
+body{
+    box-sizing: border-box;
+    padding-top: 5rem;
+
+    
+    background-color: $lightWhite;
+    color: $lightBlack;
+    font-family: 'Nunito', sans-serif;
+}
+
+a{
+    display: inline-block;
+    color: $white;
+    text-decoration: none;
+}
+
