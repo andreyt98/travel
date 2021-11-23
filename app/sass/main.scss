@@ -7,14 +7,20 @@
 
 // COMPONENTS
 @import "components/_preloader";
-@import "components/_inputs";
-@import "components/_primary-btn";
 @import "components/_logo";
 @import "components/_gradient-bg";
+@import "components/_inputs";
+@import "components/_primary-btn";
+@import "components/_swipers.scss";
+
 
 // LAYOUT
 @import "layout/_header";
 @import "layout/_hero";
+@import "layout/_hotels-section-grid";
+@import "layout/_tours-swiper.scss";
+@import "layout/_about-tours";
+@import "layout/_help-search.scss";
 @import "layout/_footer";
 
 

@@ -8,18 +8,24 @@ html{
     font-size: 62.5%;
 
     scroll-behavior: smooth;
-    white-space: nowrap;
 
 
     @include respond(very-small-phone){
 
-        font-size: 30%;
+        font-size: 30% ;
+    }
+
+    @include respond(phone-small){
+
+        font-size: 45%;
     }
    
+
     @include respond(phone){
 
-        font-size: 60%;
+        font-size: 65%;
     }
+
 
     @include respond(tab-land) {
         font-size: 80%; 
@@ -27,7 +33,7 @@ html{
 
     
     @include respond(big-desktop) {
-        font-size: 88%; 
+        font-size: 90%; 
     }
 
 
@@ -37,18 +43,51 @@ body{
     box-sizing: border-box;
     padding-top: 4rem;
 
-    
     background-color: $lightWhite;
     color: $lightBlack;
     font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
 }
 
 a{
     display: inline-block;
     text-decoration: none;
     color: $lightBlack;
+    
 }
 
-img{
-    max-width: 100%;
+
+
+.white-space-no-wrap{
+    white-space: nowrap;
+
+}
+
+
+main .hotels-section, .tours-section{
+    padding: 5.5rem 2rem 0;
+}
+
+.main section h2{
+    margin-bottom: 2rem ;
+}
+
+
+.more{
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin:  0 .8rem;
+    color: $primaryDark;
+
+    transition: all 0.3s;
+
+    &:hover{
+        transform: scale(1.1);
+
+    }
+}
+
+
+.margin-bottom{
+    margin-bottom: 5rem
 }

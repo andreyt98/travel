@@ -1,23 +1,19 @@
-// almost all the btns are with the a tag so it is set to inline
-// will need to change later to inline block 
-.btn{
-    background-color: $primary;
-    color: $white;
-
+ .btn{
+    display: inline-block;
     padding: .4rem 3rem;
     margin: .7rem 0;
 
-    border-radius: 15px;
-    cursor: pointer;
-
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.452);
-
-    display: inline-block;
-
+    background-color: $primary;
     border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.452);
+    border-radius: 15px;
+    color: $white;
+    cursor: pointer;
+    transition: all 0.3s;
 
     &:hover{
         background-color: $primaryDark;
+        transform: scale(1.1);
     }
 
 }

@@ -1,0 +1,54 @@
+.about-section{
+
+    width: 100%;
+    padding: 2rem;
+    margin-top: 1rem;
+
+    background: linear-gradient(147deg, #13202e 0%, #2c3e50 74%);
+
+    color: $white;
+    font-size: 1.5rem;
+    text-align: center;
+  
+    h3{
+        font-weight: 400;
+    }
+
+    &__content{
+
+        display: grid;
+        grid-template-columns: 1fr ;  
+        gap: 2rem;
+
+        @include respond(phone){  
+            grid-template-columns: repeat(3, 1fr);
+            padding: 5rem;
+        }
+
+        i{
+            font-size: 3.5rem;
+            margin-top: 1rem;
+        }
+
+    }
+
+
+    .location{
+        i{
+            color: rgb(33, 197, 252);           
+        }
+    }
+
+    .locals{
+        i{
+            color: rgb(66, 224, 35);
+        }
+    }
+
+    .price{
+        i{
+            color: rgb(255, 217, 0);         
+        }
+    }
+
+}
