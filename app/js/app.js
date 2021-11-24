@@ -29,13 +29,6 @@ heart.forEach(heart =>{
     } )
 })
 
-
-
-
-
-
-
-
 // tours swiper script
 var tourSwiper = new Swiper(".tours-swiper", {
                
@@ -71,3 +64,16 @@ var tourSwiper = new Swiper(".tours-swiper", {
 
     }
 });
+
+
+const links = document.querySelectorAll('.nav__menu a');
+
+
+
+links.forEach(links =>{
+    links.addEventListener('click',()=>{
+
+        menuContent.classList.remove('menu__active');
+
+    } )
+})

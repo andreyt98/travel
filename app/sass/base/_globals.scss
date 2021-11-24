@@ -12,23 +12,23 @@ html{
 
     @include respond(very-small-phone){
 
-        font-size: 30% ;
+        font-size: 35% ;
     }
 
     @include respond(phone-small){
 
-        font-size: 45%;
+        font-size: 55%;
     }
    
 
     @include respond(phone){
 
-        font-size: 65%;
+        font-size: 70%;
     }
 
 
     @include respond(tab-land) {
-        font-size: 80%; 
+        font-size: 85%; 
     }
 
     

@@ -97,6 +97,9 @@
             gap: 2rem;
             padding: 2rem;
             width: 100%;
+
+            font-size: 1.7rem;
+
             
             background-color: $lightBlack;
             text-align: center;
@@ -119,12 +122,13 @@
                 padding: 0;
                 background: none;
                 opacity: 1;
+                font-size: 1.2rem;
     
                 a{
                     color: $lightBlack;
      
                     &:not(:last-of-type){
-                        margin-right:2.5rem;
+                        margin-right:1.5rem;
                     }
                 }
     
