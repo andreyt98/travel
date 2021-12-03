@@ -19,6 +19,7 @@
         transform: translate( -50% );
         color: $white;
         
+        animation: appear 2s;
         @include position(absolute, $top: 25%, $left: 50%);
       
         @include respond(very-small-phone){
@@ -26,6 +27,31 @@
             font-size: 70%;
 
         }
+
+
+        @keyframes appear {
+
+            0%{
+                top:50%;
+                opacity: 0;
+                
+            }
+            
+           
+            
+            100%{
+                top: center;
+                opacity: 1;
+            }
+
+        }
+
+
+
+
+
     }
+
+
 
 }

@@ -393,6 +393,8 @@ main .hotels-section, .tours-section {
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
   color: #fff;
+  -webkit-animation: appear 2s;
+          animation: appear 2s;
   position: absolute;
   top: 25%;
   left: 50%;
@@ -403,6 +405,28 @@ main .hotels-section, .tours-section {
     position: absolute;
     top: 35%;
     font-size: 70%;
+  }
+}
+
+@-webkit-keyframes appear {
+  0% {
+    top: 50%;
+    opacity: 0;
+  }
+  100% {
+    top: center;
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    top: 50%;
+    opacity: 0;
+  }
+  100% {
+    top: center;
+    opacity: 1;
   }
 }
 
