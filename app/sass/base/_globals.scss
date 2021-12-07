@@ -10,16 +10,6 @@ html{
     scroll-behavior: smooth;
 
 
-    @include respond(very-small-phone){
-
-        // font-size: 35%;
-    }
-
-    // @include respond(phone-small-max){
-
-    //     font-size: 45%;
-    // }
-
     @include respond(phone-small){
 
         font-size: 55%;
@@ -61,6 +51,10 @@ a{
     
 }
 
+
+li{
+    display: inline-block;
+}
 
 
 .white-space-no-wrap{

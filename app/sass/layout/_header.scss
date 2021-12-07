@@ -124,13 +124,17 @@
                 opacity: 1;
                 font-size: 1.2rem;
     
-                a{
-                    color: $lightBlack;
-     
+                li{
                     &:not(:last-of-type){
                         margin-right:1.5rem;
                     }
                 }
+                
+                a{
+                    color: $lightBlack;
+                }
+
+               
     
             }
     
