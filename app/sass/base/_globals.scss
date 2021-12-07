@@ -12,8 +12,13 @@ html{
 
     @include respond(very-small-phone){
 
-        font-size: 35% ;
+        // font-size: 35%;
     }
+
+    // @include respond(phone-small-max){
+
+    //     font-size: 45%;
+    // }
 
     @include respond(phone-small){
 

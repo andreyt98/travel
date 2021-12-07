@@ -41,6 +41,10 @@
         @media only screen and (min-width: 18.7em) { @content };    //300px
     }
 
+    @if$breakpoint == phone-small-max {
+        @media only screen and (max-width: 18.7em) { @content };    //300px
+    }
+
     @if$breakpoint == phone-max {
         @media only screen and (max-width: 37.5em) { @content };    //600px
     }
