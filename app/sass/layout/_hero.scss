@@ -20,6 +20,7 @@
 
         transform: translate( -50% );
         color: $white;
+<<<<<<< HEAD
         @include position(absolute, $top: 12%, $left: 50%);
         overflow: hidden;
 
@@ -33,6 +34,43 @@
 
         }
 
+=======
+        
+        animation: appear 2s;
+        @include position(absolute, $top: 25%, $left: 50%);
+      
+        @include respond(very-small-phone){
+            @include position(absolute, $top: 35%);
+            font-size: 70%;
+
+        }
+
+
+        @keyframes appear {
+
+            0%{
+                top:50%;
+                opacity: 0;
+                
+            }
+            
+           
+            
+            100%{
+                top: center;
+                opacity: 1;
+            }
+
+        }
+
+
+
+
+
+>>>>>>> c7a932b8a8a87b7ed46471effaaa89b98db7cdbf
     }
+
+
+    
 
 }
