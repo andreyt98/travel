@@ -90,6 +90,7 @@
         .fa-times{
             @include position(absolute, $top: 1rem, $right:1rem);
             cursor: pointer;
+            color: $white;
             font-size: 2rem;
 
         }
@@ -97,6 +98,8 @@
             color: $white;
         }
         h3{
+            color: $white;
+
             font-weight: 400;
         }
         
