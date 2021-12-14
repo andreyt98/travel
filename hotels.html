@@ -48,9 +48,7 @@
                 </ul>
             
                 <div class="nav__burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <i class="fas fa-bars"></i> 
                 </div>
             </nav>
         </header>
@@ -303,15 +301,16 @@
 
 
 
+        <!-- FOOTER -->
         <footer class="footer" id="3">
 
             <div class="footer__content">
 
                 <div class="info">
-                    <a href="#"class="logo"> <i class="fas fa-location-arrow"></i> Travel</a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="logo" > <i class="fas fa-location-arrow"></i> Travel</a>
+                    <a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="facebook"><i class="fab fa-facebook"></i></a>
                 </div>
                 <div class="contact">
                     <h2>Contact info</h2>
@@ -324,37 +323,25 @@
                     <h2>Newsletter</h2>
                     <p>get news on incredible offers!</p>
 
-                    <form action="submit" method="post" class="">
-                        <input type="email" name="sub" id="sub" placeholder="Your email" class="input">
+                    <form onsubmit="return false" class="news-form" >
+                        <input type="email" name="sub" id="sub" placeholder="Enter your email" class="input">
+                        <input type="submit" value="Subscribe" class="btn" >
+                        <p class="form-error"></p>
                     </form>
-
-                    <button type="submit" class="btn">Subscribe</button>
                 </div>
             </div>
 
-            <p class="creator"> Made by Andrey Torrente, 2021. </p>
+            <div class="subscribe-banner ">
+                <i class="fas fa-times xx"></i>
+                <h2>Thank you for subscribing! <span><i class="far fa-check-circle"></i></span></h2>
+                
+                <h3>We'll make sure you receive the best offers to discover amazing places!</h3>
 
-            <!-- <div class="subscribe-card">
-                <div class="subscribe-card__elements">
-                    
-                    
-                    
-                    <h2>Thank you for subscribing!  <i class="fas fa-check-circle check"></i></h2>
-                    <i class="fas fa-times x"></i>
-                    
-                    <p>
-                        We'll make sure you receive the best offers on the market to discover amazing places!
-                    </p>
-                    
-                    
-                    
-                </div>
-            </div> -->
+            </div>
+            <p class="creator"> Made by Andrey Torrente, 2021. </p>
                 
         </footer>
         <!--............-->
-    
-
 
         <script src="app/js/app.js"></script>
 

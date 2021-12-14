@@ -21,59 +21,105 @@ burger.addEventListener('click', () =>{
 const heart = document.querySelectorAll('.fa-heart');
 
 
-heart.forEach(heart =>{
-    heart.addEventListener('click',()=>{
+heart.forEach(function (heart){
+    heart.addEventListener('click',function (){
 
         heart.classList.toggle('heart-clicked');
 
     } )
 })
 
-// tours swiper script
-var tourSwiper = new Swiper(".tours-swiper", {
-               
-    spaceBetween: 5,
-    freeMode: true,
-    loop:true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
 
-    breakpoints: {
-        180:{
-            slidesPerView: 1,
-
-        },
-        300:{
-            slidesPerView: 2,
-
-        },
-        600:{
-            slidesPerView: 3,
-
-        },
-       
-        1200:{
-            slidesPerView: 4,
-        }
-
-    }
-});
-
-
-const links = document.querySelectorAll('.nav__menu a');
+const menuLinks = document.querySelectorAll('.nav__menu a');
 
 
 
-links.forEach(links =>{
-    links.addEventListener('click',()=>{
+menuLinks.forEach(function (menuLinks){
+    menuLinks.addEventListener('click',()=>{
 
         menuContent.classList.remove('menu__active');
 
     } )
 })
+
+
+// newsletter form submit validation
+const btnSubmit = document.querySelector('.footer input[type=submit]');
+const email = document.querySelector('.footer input[type=email]');
+const form = document.querySelector('.news-form');
+const formError = document.querySelector('.form-error');
+const banner = document.querySelector('.subscribe-banner');
+const closeBanner = document.querySelector('.subscribe-banner .fa-times');
+
+
+
+// regular expression to validate email
+const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+btnSubmit.addEventListener('click', function(e){
+
+    if(email.value == ''){
+
+     
+        email.placeholder = 'Please, enter your email';
+        email.style.border = '1px solid red';
+
+        setTimeout(function (){
+            
+            email.style.border = 'none';
+         
+        }, 2000)
+
+    }
+
+    // if email is correct
+    if(emailRegex.test(email.value)){
+        email.value = '';
+        banner.style.left = '0%';
+    }
+
+
+
+    // hide the mobile menu just in case, for better user experience.
+    if(menuContent.classList.contains('menu__active')){
+        menuContent.classList.remove('menu__active');
+    }
+    // ------------------------------------------------
+
+});
+
+
+closeBanner.addEventListener('click',function (){
+    banner.style.left = '101%';
+});
+
+// -------------------------------------
+
+
+
+
+
+// search form message
+const search = document.querySelector('.hero .search-form');
+const txt = document.querySelector('.hero .txt');
+const searchInput = document.querySelector('.hero input[type=text]');
+
+search.addEventListener('submit', function(){
+    
+    // show the following message
+    txt.textContent = "oops!, this functionality is not working yet...";
+    txt.classList.remove('hidden');
+
+    // clean the search value
+    searchInput.value = '';
+    
+
+    // the message will be shown for 3 seconds and the disappear
+    setTimeout(function (){
+        txt.classList.add('hidden'); 
+
+    }, 3500);
+
+
+});
+

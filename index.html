@@ -55,9 +55,7 @@
                 </ul>
             
                 <div class="nav__burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <i class="fas fa-bars"></i> 
                 </div>
             </nav>
 
@@ -75,10 +73,11 @@
                     <h1>Travel with us and explore the life you always dreamed of</h1>
                     
                     <div class="search-bar">
-                        <form onsubmit="return false" >
+                        <form class = "search-form" onsubmit="return false" >
                             <input type="text" name="search" id="search" placeholder="search a place" class="input">
-                            <input type="button" value="Search" class="btn">
+                            <input type="submit" value="Search" class="btn">
                         </form>
+                        <p class="txt hidden"></p>
                     </div>
                 </div>
         </div>
@@ -408,14 +407,21 @@
                     <h2>Newsletter</h2>
                     <p>get news on incredible offers!</p>
 
-                    <form onsubmit="return false" >
-                        <input type="email" name="sub" id="sub" placeholder="Your email" class="input">
+                    <form onsubmit="return false" class="news-form" >
+                        <input type="email" name="sub" id="sub" placeholder="Enter your email" class="input">
+                        <input type="submit" value="Subscribe" class="btn" >
+                        <p class="form-error"></p>
                     </form>
-
-                    <button type="submit" class="btn">Subscribe</button>
                 </div>
             </div>
 
+            <div class="subscribe-banner ">
+                <i class="fas fa-times xx"></i>
+                <h2>Thank you for subscribing! <span><i class="far fa-check-circle"></i></span></h2>
+                
+                <h3>We'll make sure you receive the best offers to discover amazing places!</h3>
+
+            </div>
             <p class="creator"> Made by Andrey Torrente, 2021. </p>
                 
         </footer>
@@ -425,6 +431,8 @@
 
         <!-- swiper js -->
         <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="app/js/swiper.js"></script>
+
         <!-- ............ -->
 
 
