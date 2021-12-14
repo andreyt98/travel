@@ -18,9 +18,7 @@
         &__burger{
 
             position: relative;
-            
-        
-            
+               
             transition: transform 0.3s;
             cursor: pointer;
             
@@ -40,9 +38,7 @@
                     transform: scale(0.85);
                 }
             }
-            
-            
-    
+     
         }
 
         &__menu{            
@@ -51,12 +47,9 @@
             gap: 2rem;
             padding: 2rem;
             width: 100%;
-
             font-size: 1.7rem;
-
-            
             background-color: $lightBlack;
-            background: linear-gradient(147deg, #13202e 0%, #2c3e50 74%);
+            background: linear-gradient(147deg, #153b64 0%, #224466 74%);
 
             text-align: center;
             transition: all 0.3s;
@@ -93,8 +86,6 @@
                
     
             }
-    
-    
     
         }
     
