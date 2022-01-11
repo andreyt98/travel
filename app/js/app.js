@@ -47,7 +47,6 @@ menuLinks.forEach(function (menuLinks){
 const btnSubmit = document.querySelector('.footer input[type=submit]');
 const email = document.querySelector('.footer input[type=email]');
 const form = document.querySelector('.news-form');
-const formError = document.querySelector('.form-error');
 const banner = document.querySelector('.subscribe-banner');
 const closeBanner = document.querySelector('.subscribe-banner .fa-times');
 
@@ -123,3 +122,15 @@ search.addEventListener('submit', function(){
 
 });
 
+
+// prevent default behavior of anchor elements of the hotel section
+const book =  document.querySelectorAll('.hotel-grid a, .help-search a');
+
+book.forEach(function(elemento){
+
+    
+    
+    elemento.addEventListener('click', function(evt){
+       evt.preventDefault();
+    });
+});
