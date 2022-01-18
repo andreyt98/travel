@@ -35,7 +35,8 @@ const menuLinks = document.querySelectorAll('.nav__menu a');
 
 
 menuLinks.forEach(function (menuLinks){
-    menuLinks.addEventListener('click',()=>{
+    menuLinks.addEventListener('click',() => {
+
 
         menuContent.classList.remove('menu__active');
 
@@ -134,3 +135,5 @@ book.forEach(function(elemento){
        evt.preventDefault();
     });
 });
+
+

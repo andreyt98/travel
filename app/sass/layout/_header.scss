@@ -45,7 +45,8 @@
         
 
         &__menu{            
-            @include position(absolute, $top: 5rem, $right: 101%);
+            @include position(absolute, $top: 5rem);
+            // transform: translateX(100%);
             @include flex($direction: column, $justify:space-between);
             gap: 2rem;
             padding: 2rem;
@@ -56,7 +57,7 @@
 
             text-align: center;
             transition: all 0.3s;
-            opacity: 0;
+            // opacity: 0;
             
            a{
                color: $white;
@@ -94,7 +95,7 @@
     
         .menu__active{
             right: 0;
-            opacity: 1;
+            // opacity: 1;
         }
 
 
