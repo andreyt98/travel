@@ -45,8 +45,7 @@
         
 
         &__menu{            
-            @include position(absolute, $top: 5rem);
-            // transform: translateX(100%);
+            @include position(absolute, $top: 5rem, $right: 101%);
             @include flex($direction: column, $justify:space-between);
             gap: 2rem;
             padding: 2rem;
@@ -95,6 +94,7 @@
     
         .menu__active{
             right: 0;
+
             // opacity: 1;
         }
 

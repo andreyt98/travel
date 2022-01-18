@@ -32,6 +32,13 @@
             font-size: inherit;
 
         }
+        
+        #search{
+            @include respond(phone){
+                width: 65%;
+            }
+        }
+
 
     }
 
