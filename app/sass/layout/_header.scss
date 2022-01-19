@@ -2,14 +2,13 @@
     @include position (fixed, $top: 0);
     @include flex($justify:space-between, $align:center);
     width: 100%;
-    padding: .2rem 1.3rem;
+    padding: .6rem 1.3rem;
     z-index: 100;
-    transition: all 0.7s;
+    transition: background 0.7s;
     
     @include respond(phone-small-max){
         background-color: $lightWhite;
         box-shadow: 5px 5px 10px 1px #00000052;
-        padding: .5rem 1.3rem;
 
     }
 
