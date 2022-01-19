@@ -136,4 +136,10 @@ book.forEach(function(elemento){
     });
 });
 
+const $header = document.querySelector('.header');
 
+window.addEventListener('scroll', function(){
+
+    $header.classList.toggle('active-scroll', window.scrollY > 0);
+
+});

@@ -8,8 +8,19 @@
 
     .btn, .input{
         font-size: 1.1rem;
+        
+        @include respond(phone-small-max){
+            font-size: .8rem;
+        }
+
     }
 
+
+
+
+    @include respond(tab-port){
+        height: 100vh;
+    }
     
     &__video{
         width: 100%;  
@@ -20,11 +31,11 @@
 
         transform: translate( -50% );
         color: $white;
-        @include position(absolute, $top: 12%, $left: 50%);
+        @include position(absolute, $top: 35%, $left: 50%);
         overflow: hidden;
 
         width: 90%;
-        font-size: 65%;
+        font-size: 55%;
 
         @include respond(phone-small){
             @include position(absolute, $top: 25%);
@@ -53,6 +64,43 @@
         font-weight: 700;
     }
 
+
+    &__actions{
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1rem;
+        
+        
+        .hero__actions--element{
+            background: #0332446e;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-top: 1rem;
+            
+            
+            
+            p{
+                color: $lightWhite;
+            }
+            a{
+                margin-top: 1rem;
+                color: $white;
+                transition: all 0.3s;
+                border-bottom: 1px solid #ffffff85;
+                &:hover{
+                    transform: scale(1.1);
+                    border-bottom: 1px solid $primary;
+                }
+            }
+        }
+    }
    
 
+    // .bg{
+    //     background: rgb(253, 30, 30);
+    //     width: 100%;
+        
+    // }
 }

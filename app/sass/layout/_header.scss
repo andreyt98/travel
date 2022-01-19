@@ -2,11 +2,16 @@
     @include position (fixed, $top: 0);
     @include flex($justify:space-between, $align:center);
     width: 100%;
-    padding: 1.2rem;
+    padding: .2rem 1.3rem;
     z-index: 100;
+    transition: all 0.7s;
     
-    background-color: $lightWhite;
-    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.295);
+    @include respond(phone-small-max){
+        background-color: $lightWhite;
+        box-shadow: 5px 5px 10px 1px #00000052;
+        padding: .5rem 1.3rem;
+
+    }
 
 
     .nav{
@@ -34,10 +39,6 @@
                 font-size: 2.3rem;
                 color: $primary;
 
-                &:hover{
-                
-                    transform: scale(0.85);
-                }
             }
      
         }
@@ -83,7 +84,7 @@
                 }
                 
                 a{
-                    color: $lightBlack;
+                    // color: $lightBlack;
                 }
 
                
@@ -95,9 +96,48 @@
         .menu__active{
             right: 0;
 
-            // opacity: 1;
         }
 
 
+    }
+
+
+}
+
+.hotels-header{
+    background-color: $lightWhite;
+    box-shadow: 5px 5px 10px 1px #00000052;
+
+    .hotels-nav{
+
+        a{
+            @include respond(phone){
+                
+                color: $lightBlack;
+                
+                a:hover{
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+}
+
+.active-scroll{
+    background-color: $lightWhite;
+    box-shadow: 5px 5px 10px 1px #00000052;
+
+    @include respond(phone){
+
+
+        .nav a{
+            color: $lightBlack;
+            
+            &:hover{
+                color: $primary;
+                
+            }
+        }
     }
 }
