@@ -2,16 +2,16 @@
     @include position (fixed, $top: 0);
     @include flex($justify:space-between, $align:center);
     width: 100%;
-    padding: .6rem 1.3rem;
+    padding: .5rem 1.3rem;
     z-index: 100;
     transition: background 0.7s;
     
-    @include respond(phone-small-max){
+    @media #{$phone-down}{
+
         background-color: $lightWhite;
         box-shadow: 5px 5px 10px 1px #00000052;
-
     }
-
+    
 
     .nav{
 
@@ -29,66 +29,61 @@
             
             display: block;
 
-            @include respond(phone) {
+            @media #{$tab-up}{
+
                 display: none;
             }
+        
 
             i{
                 transition: 0.4s;
-                font-size: 2.3rem;
+                // font-size: 1.7rem;
                 color: $primary;
-
             }
      
         }
 
-        
-
         &__menu{            
-            @include position(absolute, $top: 5rem, $right: 101%);
-            @include flex($direction: column, $justify:space-between);
+            @include position(absolute, $top: 0rem, $right: -101%);
+            @include flex($direction: column, $justify:flex-start, $align: center);
+            box-shadow: 5px 5px 10px 8px #00000052;
+
             gap: 2rem;
-            padding: 2rem;
-            width: 100%;
-            font-size: 1.7rem;
+            padding: 8rem 2rem;
+            width: 50%;
             background-color: $lightBlack;
             background: linear-gradient(147deg, #153b64 0%, #224466 74%);
 
-            text-align: center;
-            transition: all 0.3s;
-            // opacity: 0;
+            // text-align: center;
+            transition: background, right 0.3s;
+            text-align: left;
+            height: 100vh;
             
            a{
                color: $white;
+
            }
             a:hover{
                 color: $primary;
             }
     
-    
-            @include respond(phone){
-    
+            @media #{$tab-up}{
                 display: inline;
                 position: static;
                 width: auto;
+                height: auto;
                 padding: 0;
                 background: none;
                 opacity: 1;
-                font-size: 1.2rem;
     
                 li{
                     &:not(:last-of-type){
                         margin-right:1.5rem;
                     }
                 }
-                
-                a{
-                    // color: $lightBlack;
-                }
-
-               
-    
+          
             }
+
     
         }
     
@@ -110,14 +105,15 @@
     .hotels-nav{
 
         a{
-            @include respond(phone){
-                
+
+            @media #{$tab-up}{
                 color: $lightBlack;
                 
                 a:hover{
                     color: $primary;
                 }
             }
+         
         }
     }
 
@@ -127,9 +123,9 @@
     background-color: $lightWhite;
     box-shadow: 5px 5px 10px 1px #00000052;
 
-    @include respond(phone){
 
-
+    @media #{$tab-up}{
+        
         .nav a{
             color: $lightBlack;
             
@@ -139,4 +135,5 @@
             }
         }
     }
+ 
 }

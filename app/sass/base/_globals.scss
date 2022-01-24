@@ -4,39 +4,34 @@
     box-sizing: inherit;
 }
 
+
 html{
     font-size: 62.5%;
 
     scroll-behavior: smooth;
 
 
-    @include respond(phone-small){
-
-        font-size: 55%;
+    @media #{$phone-up}{  //300px +
+        font-size: 0.8rem;
+        
     }
-   
-
-    @include respond(phone){
-
-        font-size: 70%;
-    }
-
-
-    @include respond(tab-land) {
-        font-size: 85%; 
-    }
-
     
-    @include respond(big-desktop) {
-        font-size: 90%; 
+    
+    @media #{$tab-up}{ //600px +
+        font-size: 1rem;
+        
     }
 
+
+    @media #{$desktop-up}{ //1800px +
+        font-size: 1.25rem;
+
+    }
 
 }
 
 body{
     box-sizing: border-box;
-    // padding-top: 4rem;
 
     background-color: $lightWhite;
     color: $lightBlack;
@@ -64,28 +59,23 @@ li{
 
 
 main .hotels-section, .tours-section{
-    padding: 3.5rem 2rem 0;
+    padding: 3.5rem 1rem 0;
 }
 
 .main section h2{
-    margin-bottom: 2rem ;
+    margin-bottom: 1.3rem ;
 }
 
 
 
 // anchor to the hotels page
 .more{
-    font-size: 1.5rem;
     font-weight: 900;
-    margin:  0 .8rem;
     color: $primaryDark;
 
     transition: all 0.3s;
 
-    &:hover{
-        transform: scale(1.1);
-
-    }
+    &:hover{ transform: translateY(-5px);}
 }
 
 
@@ -96,3 +86,8 @@ main .hotels-section, .tours-section{
 .hidden{
     display: none;
 }
+
+h1,h2,h3{
+    font-size: 1rem;
+}
+

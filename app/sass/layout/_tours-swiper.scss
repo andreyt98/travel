@@ -7,23 +7,49 @@
     opacity: 0;
     transition: all .3s;
     border-radius: 12px;
-    gap: 1rem;
+    gap: .5rem;
+
+    padding: .1rem;
 
     color: white;
 
 
     // price
-    p{
 
+    p{
         font-weight: 700;
-        font-size: 1.5rem;
+        @media #{$tab-up}{
+        
+            // font-size: .8rem;
+        }
+        
+    }
+    
+    
+    i{
+        // @media #{$phone-up}{font-size: 1.5rem; }
+        
+    }
+
+
+
+    @media #{$tab-up}{
+
+        // p{
+        //     font-weight: 700;
+        //     font-size: 1.5rem;
+        // }
+
+        // i{
+        //     font-size: 2rem;
+
+        // }
     }
 
 
     // heart
     i{
         cursor: pointer;
-        font-size: 2rem;
         transition: all 0.3s;
     }
 
@@ -55,3 +81,4 @@
   border-radius: 12px;
 
 }
+

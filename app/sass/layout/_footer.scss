@@ -21,7 +21,6 @@
     }
 
     a:not([class="logo"]){
-        font-size: 1.3rem;
         transition: all 0.3s;
         color: white;    
 
@@ -42,7 +41,7 @@
         border-bottom: 1px solid rgba(175, 175, 175, 0.219);
 
 
-        @media screen and(max-width: 360px) {
+        @media screen and(max-width: 450px) {
             grid-template-columns: 1fr ;  
             gap: 2rem;   
         }
@@ -60,7 +59,7 @@
     }
 
    .btn, .input{
-       font-size: 1rem;
+       font-size: inherit;
    }
 
     .subscribe-banner{
@@ -79,14 +78,14 @@
 
 
         .fa-check-circle{
-            font-size: 2rem;
+            // font-size: 2rem;
             color: yellowgreen;
         }
         .fa-times{
             @include position(absolute, $top: 1rem, $right:1rem);
             cursor: pointer;
             color: $white;
-            font-size: 2rem;
+            // font-size: 2rem;
 
         }
         h2{

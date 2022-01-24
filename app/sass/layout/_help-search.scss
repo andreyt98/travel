@@ -3,11 +3,14 @@
 .help-search{
 
     height: 25.5rem;
+    overflow: hidden;
+    white-space: nowrap;
 
-    @include respond(phone){
-        height: 45.5rem;   
+    @media #{$tab-up}{
+        
+        height: 35.5rem;   
     }
-
+   
     &__container{
  
         position: relative;
@@ -23,32 +26,13 @@
             z-index: 1;
             color: white;
 
-            @include respond(very-small){
-
-                font-size: 1.3rem;
-            }
-            
-
-            @include respond(phone){
-                
-                font-size: 2.3rem;
-            }
-
-
-            h2{
-
-                @include respond(tab-land) { 
-                    font-size: 3.5rem; 
-                }
-            }  
-            
+            @media #{$phone-up}{
         
-            @include respond(big-desktop) {
-                font-size: 4.5rem; 
+                // font-size: 1.3rem;
             }
-            
-            
-
+        
+            h2{font-size: 2rem; }
+       
         }
 
         //container

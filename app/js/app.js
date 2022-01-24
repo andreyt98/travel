@@ -8,13 +8,14 @@ window.onload = function(){
 
 // burger
 const burger = document.querySelector('.nav__burger');
-const menuContent = document.querySelector('.nav__menu')
+const menuContent = document.querySelector('.nav__menu');
+
 
 burger.addEventListener('click', () =>{
     burger.classList.toggle('burger__clicked');
     menuContent.classList.toggle('menu__active');
 
-})
+});
 
 
 
@@ -61,9 +62,8 @@ btnSubmit.addEventListener('click', function(e){
     if(email.value == ''){
 
      
-        email.placeholder = 'Please, enter your email';
         email.style.border = '1px solid red';
-
+        
         setTimeout(function (){
             
             email.style.border = 'none';
