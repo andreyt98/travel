@@ -19,7 +19,7 @@ burger.addEventListener('click', () =>{
 
 
 
-const heart = document.querySelectorAll('.fa-heart');
+const heart = document.querySelectorAll('.heart');
 
 
 heart.forEach(function (heart){

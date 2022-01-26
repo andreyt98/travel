@@ -23,24 +23,23 @@
         &__burger{
 
             position: relative;
-               
-            transition: transform 0.3s;
-            cursor: pointer;
-            
+                           
             display: block;
+            color: $primary;
+
+            cursor: pointer;
+            text-align: center;
+            user-select: none;
+            font-size: 200%;
+            width: 100%;
+            height: 100%;
+            
 
             @media #{$tab-up}{
 
                 display: none;
             }
         
-
-            i{
-                transition: 0.4s;
-                // font-size: 1.7rem;
-                color: $primary;
-            }
-     
         }
 
         &__menu{            
