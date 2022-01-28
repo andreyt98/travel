@@ -1,0 +1,45 @@
+.about-section {
+  width: 100%;
+  padding: 2rem;
+  margin-top: 1rem;
+  background: linear-gradient(147deg, #153b64 0%, #224466 74%);
+  color: $white;
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    @media #{$tab-up} {
+      grid-template-columns: repeat(3, 1fr);
+      padding: 2rem;
+    }
+    i {
+      font-size: 3rem;
+      margin-top: 1rem;
+    }
+  }
+
+  .location {
+    i {
+      color: rgb(33, 197, 252);
+    }
+  }
+
+  .locals {
+    i {
+      color: rgb(66, 224, 35);
+    }
+  }
+
+  .price {
+    i {
+      color: rgb(255, 217, 0);
+    }
+  }
+}

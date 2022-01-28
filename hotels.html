@@ -1,385 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="icon" href="img/favicon.svg" />
 
-    <link rel="icon" href="img/favicon.svg">
-
-  
     <!-- font awesome icons cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-     <!-- ---------------------- -->
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- ---------------------- -->
 
     <!-- monserrat font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- main css stylesheet -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="public/css/main.css" />
 
-<title>Travel - Hotels</title>
+    <title>Travel - Hotels</title>
+  </head>
 
-</head>
+  <body>
+    <div class="preloader">
+      <div class="preloader__content">
+        <i class="fas fa-location-arrow arrow"></i>
+      </div>
+    </div>
 
-    <body>
+    <header class="header white-space-no-wrap hotels-header">
+      <div class="logo-container">
+        <a href="index.html" class="logo">
+          <i class="fas fa-location-arrow"></i> Travel</a
+        >
+      </div>
 
-        <div class="preloader">
-            <div class="preloader__content">
-                <i class="fas fa-location-arrow arrow"></i>
+      <nav class="nav">
+        <ul class="nav__menu hotels-nav">
+          <li><a href="index.html">Home</a></li>
+          <li class="more-link"><a href="#">More</a></li>
+        </ul>
+
+        <p class="nav__burger">&#8801;</p>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!-- HOTELS SECTION -->
+      <section class="hotels-section margin">
+        <h2>Hotels</h2>
+
+        <div class="hotel-grid">
+          <div class="hotel-card-grid">
+            <div class="hotel-img">
+              <img
+                src="img/hotels/hotel-11.webp"
+                alt=""
+                width="150"
+                height="95"
+                loading="lazy"
+              />
             </div>
+
+            <div class="hotel-info">
+              <p>Hôtel Le Toiny, Anse de Toiny, St. Bart's</p>
+              <p>$200</p>
+              <p class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+              <a href="#" class="btn">Book</a>
+            </div>
+          </div>
+
+          <div class="hotel-card-grid">
+            <div class="hotel-img">
+              <img
+                src="img/hotels/hotel-8.webp"
+                alt=""
+                width="150"
+                height="95"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="hotel-info">
+              <p>Hard Rock Hotel, Cabo San Lucas, Mexico</p>
+              <p>$195</p>
+              <p class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+              <a href="#" class="btn">Book</a>
+            </div>
+          </div>
+
+          <div class="hotel-card-grid">
+            <div class="hotel-img">
+              <img
+                src="img/hotels/hotel-7.webp"
+                alt=""
+                width="150"
+                height="95"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="hotel-info">
+              <p>Nayara Tented Camp, Costa Rica</p>
+              <p>$195</p>
+              <p class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+              <a href="#" class="btn">Book</a>
+            </div>
+          </div>
+
+          <div class="hotel-card-grid">
+            <div class="hotel-image-container">
+              <img
+                src="img/hotels/hotel-3.webp"
+                alt=""
+                width="150"
+                height="95"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="hotel-info">
+              <p>St. Regis Bora Bora Resort, French Polynesia</p>
+              <p>$195</p>
+              <p class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+              <a href="#" class="btn">Book</a>
+            </div>
+          </div>
+
+          <div class="hotel-card-grid">
+            <div class="hotel-image-container">
+              <img
+                src="img/hotels/hotel-1.webp"
+                alt=""
+                width="150"
+                height="95"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="hotel-info">
+              <p>Jade Mountain, St. Lucia</p>
+              <p>$195</p>
+              <p class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+              <a href="#" class="btn">Book</a>
+            </div>
+          </div>
+
+          <div class="hotel-card-grid">
+            <div class="hotel-img">
+              <img
+                src="img/hotels/hotel-5.webp"
+                alt=""
+                width="150"
+                height="95"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="hotel-info">
+              <p>Soneva Fushi, Maldives</p>
+              <p>$195</p>
+              <p class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+              <a href="#" class="btn">Book</a>
+            </div>
+          </div>
+
+          <div class="hotel-card-grid">
+            <div class="hotel-img">
+              <img
+                src="img/hotels/hotel-9.webp"
+                alt=""
+                width="150"
+                height="95"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="hotel-info">
+              <p>La Esperanza, Cabo San Lucas, Mexico</p>
+              <p>$195</p>
+              <p class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+              <a href="#" class="btn">Book</a>
+            </div>
+          </div>
+          <div class="hotel-card-grid">
+            <div class="hotel-img">
+              <img
+                src="img/hotels/hotel-6.webp"
+                alt=""
+                width="150"
+                height="95"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="hotel-info">
+              <p>Mahekal Beach Resort, Playa del Carmen, Mexico</p>
+              <p>$195</p>
+              <p class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+              <a href="#" class="btn">Book</a>
+            </div>
+          </div>
+
+          <div class="hotel-card-grid">
+            <div class="hotel-img">
+              <img
+                src="img/hotels/hotel-12.webp"
+                alt=""
+                width="150"
+                height="95"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="hotel-info">
+              <p>Nobu Ryokan Malibu, California</p>
+              <p>$195</p>
+              <p class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+              <a href="#" class="btn">Book</a>
+            </div>
+          </div>
+
+          <div class="hotel-card-grid">
+            <div class="hotel-img">
+              <img
+                src="img/hotels/hotel-4.webp"
+                alt=""
+                width="150"
+                height="95"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="hotel-info">
+              <p>Astarte Suites Hotel, Greece</p>
+              <p>$195</p>
+              <p class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+              <a href="#" class="btn">Book</a>
+            </div>
+          </div>
+
+          <div class="hotel-card-grid">
+            <div class="hotel-image-container">
+              <img
+                src="img/hotels/hotel-2.webp"
+                alt=""
+                width="150"
+                height="95"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="hotel-info">
+              <p>Canaves Oia Epitome, Greece</p>
+              <p>$195</p>
+              <p class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+              <a href="#" class="btn">Book</a>
+            </div>
+          </div>
+
+          <div class="hotel-card-grid">
+            <div class="hotel-img">
+              <img
+                src="img/hotels/hotel-10.webp"
+                alt=""
+                width="150"
+                height="95"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="hotel-info">
+              <p>Halekulani Okinawa, Japan</p>
+              <p>$195</p>
+              <p class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+              <a href="#" class="btn">Book</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--............-->
+    </main>
+    <!--............-->
+
+    <!-- FOOTER -->
+    <footer class="footer" id="section-three">
+      <div class="footer__content">
+        <div class="info">
+          <a href="#" class="logo">
+            <i class="fas fa-location-arrow"></i> Travel</a
+          >
+
+          <div class="socials">
+            <a href="#" aria-label="twitter" onclick="return false"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" aria-label="instagram" onclick="return false"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="facebook" onclick="return false"
+              ><i class="fab fa-facebook"></i
+            ></a>
+          </div>
+        </div>
+        <div class="contact">
+          <h2>Contact info</h2>
+          <p>travel@email.com</p>
+          <p>+123-456-789</p>
+          <p>San José, Costa Rica</p>
         </div>
 
+        <div class="newsletter">
+          <h2>Newsletter</h2>
+          <p>get news on incredible offers!</p>
 
-        <header class="header white-space-no-wrap hotels-header">
+          <form onsubmit="return false" class="news-form">
+            <input
+              type="email"
+              name="sub"
+              id="sub"
+              placeholder="Enter your email"
+              class="input"
+            />
+            <input type="submit" value="Subscribe" class="btn" />
+          </form>
+        </div>
+      </div>
 
-            <div class="logo-container">
-                <a href="index.html" class="logo"> <i class="fas fa-location-arrow"></i> Travel</a>
+      <div class="subscribe-banner">
+        <i class="fas fa-times xx"></i>
+        <h2>
+          Thank you for subscribing!
+          <span><i class="far fa-check-circle"></i></span>
+        </h2>
 
-            </div>
+        <h3>
+          We'll make sure you receive the best offers to discover amazing
+          places!
+        </h3>
+      </div>
+      <p class="creator">Made by Andrey Torrente, 2021.</p>
+      <div class="mysocials">
+        <a href="https://github.com/andreyts98" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="#" target="_blank" onclick="return false"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="#" target="_blank" onclick="return false"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+    </footer>
+    <!--............-->
 
-
-            <nav class="nav">
-                <ul class="nav__menu hotels-nav">
-                    <li><a href="index.html">Home</a></li>        
-                    <li class="more-link"><a href="#">More</a></li>
-                </ul>
-        
-                <p class="nav__burger">&#8801;</p>
-            </nav>
-        </header>
-
-        <main class="main" >
-
-
-            <!-- HOTELS SECTION -->
-            <section class="hotels-section margin" >
-                <h2>Hotels</h2>
-
-                <div class="hotel-grid">
-
-                    <div class="hotel-card-grid ">
-                        <div class="hotel-img">
-                            <img src="img/hotels/hotel-11.webp" alt="" width = "150" height = "95" loading="lazy">
-
-                        </div>
-
-                        <div class="hotel-info">
-                            <p>Hôtel Le Toiny, Anse de Toiny, St. Bart's </p>
-                            <p>$200</p>
-                            <p class="stars">
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                             </p>
-                            <a href="#" class="btn">Book</a>
-                        </div>
-                    </div>
-
-                    <div class="hotel-card-grid ">
-                        <div class="hotel-img">
-                            <img src="img/hotels/hotel-8.webp" alt="" width = "150" height = "95" loading="lazy">
-
-                        </div>
-
-                        <div class="hotel-info">
-                            <p>Hard Rock Hotel, Cabo San Lucas, Mexico </p>
-                            <p>$195</p>
-                            <p class="stars">
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                             </p>
-                            <a href="#" class="btn">Book</a>
-                        </div>
-                    </div>
-
-                    <div class="hotel-card-grid ">
-                        <div class="hotel-img">
-                            <img src="img/hotels/hotel-7.webp" alt="" width = "150" height = "95" loading="lazy">
-
-                        </div>
-
-                        <div class="hotel-info">
-                            <p>Nayara Tented Camp, Costa Rica </p>
-                            <p>$195</p>
-                           <p class="stars">
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                             </p>
-                            <a href="#" class="btn">Book</a>
-                        </div>
-                    </div>
-
-
-                    <div class="hotel-card-grid ">
-                        <div class="hotel-image-container" >
-                            <img src="img/hotels/hotel-3.webp" alt="" width = "150" height = "95" loading="lazy">
-
-                        </div>
-
-
-                        <div class="hotel-info">
-                            <p>St. Regis Bora Bora Resort, French Polynesia </p>
-                            <p>$195</p>
-                            <p class="stars">
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                             </p>
-                            <a href="#" class="btn">Book</a>
-                        </div>
-                    </div>
-
-
-                    <div class="hotel-card-grid " >
-
-                        <div class="hotel-image-container" >
-                            <img src="img/hotels/hotel-1.webp" alt="" width = "150" height = "95" loading="lazy">
-
-                        </div>
-
-                        <div class="hotel-info">
-                            <p>Jade Mountain, St. Lucia </p>
-                            <p>$195</p>
-                            <p class="stars">
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                             </p>
-                            <a href="#" class="btn">Book</a>
-                        </div>
-                    </div>
-
-                    
-
-                   
-                    
-                
-                    <div class="hotel-card-grid ">
-                        <div class="hotel-img">
-                            <img src="img/hotels/hotel-5.webp" alt="" width = "150" height = "95" loading="lazy">
-
-                        </div>
-
-                        <div class="hotel-info">
-                            <p>Soneva Fushi, Maldives </p>
-                            <p>$195</p>
-                            <p class="stars">
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                             </p>
-                            <a href="#" class="btn">Book</a>
-                        </div>
-                    </div>
-
-                    <div class="hotel-card-grid ">
-                        <div class="hotel-img">
-                            <img src="img/hotels/hotel-9.webp" alt="" width = "150" height = "95" loading="lazy">
-
-                        </div>
-
-                        <div class="hotel-info">
-                            <p>La Esperanza, Cabo San Lucas, Mexico</p>
-                            <p>$195</p>
-                            <p class="stars">
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                             </p>
-                            <a href="#" class="btn">Book</a>
-                        </div>
-                    </div>
-                    <div class="hotel-card-grid ">
-                        <div class="hotel-img">
-                            <img src="img/hotels/hotel-6.webp" alt="" width = "150" height = "95" loading="lazy">
-
-                        </div>
-
-                        <div class="hotel-info">
-                            <p>Mahekal Beach Resort, Playa del Carmen, Mexico </p>
-                            <p>$195</p>
-                            <p class="stars">
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                             </p>
-                            <a href="#" class="btn">Book</a>
-                        </div>
-                    </div>
-
-                    
-                    <div class="hotel-card-grid ">
-                        <div class="hotel-img">
-                            <img src="img/hotels/hotel-12.webp" alt="" width = "150" height = "95" loading="lazy">
-
-                        </div>
-
-                        <div class="hotel-info">
-                            <p>Nobu Ryokan Malibu, California</p>
-                            <p>$195</p>
-                            <p class="stars">
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                             </p>
-                            <a href="#" class="btn">Book</a>
-                        </div>
-                    </div>
-
-                    <div class="hotel-card-grid ">
-                        <div class="hotel-img">
-                            <img src="img/hotels/hotel-4.webp" alt="" width = "150" height = "95" loading="lazy">
-
-                        </div>
-
-                        <div class="hotel-info">
-                            <p>Astarte Suites Hotel, Greece </p>
-                            <p>$195</p>
-                            <p class="stars">
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                             </p>
-                            <a href="#" class="btn">Book</a>
-                        </div>
-                    </div>
-
-                    <div class="hotel-card-grid ">
-                        <div class="hotel-image-container" >
-                            <img src="img/hotels/hotel-2.webp" alt="" width = "150" height = "95" loading="lazy">
-                        </div>
-
-                        <div class="hotel-info">
-                            <p>Canaves Oia Epitome, Greece</p>
-                            <p>$195</p>
-                            <p class="stars">
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                             </p>
-                            <a href="#" class="btn">Book</a>
-                        </div>
-                    </div>
-                    
-                    <div class="hotel-card-grid ">
-                        <div class="hotel-img">
-                            <img src="img/hotels/hotel-10.webp" alt="" width = "150" height = "95" loading="lazy">
-
-                        </div>
-
-                        <div class="hotel-info">
-                            <p>Halekulani Okinawa, Japan</p>
-                            <p>$195</p>
-                            <p class="stars">
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                             </p>
-                            <a href="#" class="btn">Book</a>
-                        </div>
-                    </div>
-                    
-                    
-                
-                
-                
-                </div>
-
-            </section>
-            <!--............-->
-        
-        
-        </main>
-        <!--............-->
-
-
-
-         <!-- FOOTER -->
-         <footer class="footer" id="section-three">
-
-            <div class="footer__content">
-
-                <div class="info">
-                    <a href="#" class="logo"> <i class="fas fa-location-arrow"></i> Travel</a>
-
-
-                    <div class="socials">
-                        <a href="#" aria-label="twitter" onclick="return false"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="instagram" onclick="return false"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="facebook" onclick="return false"><i class="fab fa-facebook"></i></a>
-                    </div>
-                </div>
-                <div class="contact">
-                    <h2>Contact info</h2>
-                    <p>travel@email.com</p>
-                    <p>+123-456-789</p>
-                    <p>San José, Costa Rica</p>
-                </div>
-
-                <div class="newsletter">
-                    <h2>Newsletter</h2>
-                    <p>get news on incredible offers!</p>
-
-                    <form onsubmit="return false" class="news-form" >
-                        <input type="email" name="sub" id="sub" placeholder="Enter your email" class="input">
-                        <input type="submit" value="Subscribe" class="btn" >
-                    </form>
-                </div>
-            </div>
-
-            <div class="subscribe-banner ">
-                <i class="fas fa-times xx"></i>
-                <h2>Thank you for subscribing! <span><i class="far fa-check-circle"></i></span></h2>
-                
-                <h3>We'll make sure you receive the best offers to discover amazing places!</h3>
-
-            </div>
-            <p class="creator"> Made by Andrey Torrente, 2021. </p>
-            <div class="mysocials">
-                <a href="https://github.com/andreyts98" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="#" target="_blank" onclick="return false"><i class="fab fa-linkedin"></i></a>
-                <a href="#" target="_blank" onclick="return false"><i class="fab fa-instagram"></i></a>       
-            </div>
-                
-        </footer>
-        <!--............-->
-    
-        <!-- <script src="app/js/app.js"></script> -->
-        <script src="app/js/hotels.js"></script>
-
-
-
-    </body>
-
+    <script src="src/js/hotels.js"></script>
+  </body>
 </html>

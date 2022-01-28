@@ -1,0 +1,23 @@
+// main sass file
+
+// BASE
+@import "base/_mixins";
+@import "base/_variables";
+@import "base/_globals";
+
+// COMPONENTS
+@import "components/_preloader";
+@import "components/_logo";
+@import "components/_gradient-bg";
+@import "components/_inputs";
+@import "components/_primary-btn";
+@import "components/_swipers";
+
+// LAYOUT
+@import "layout/_header";
+@import "layout/_hero";
+@import "layout/_hotels-section-grid";
+@import "layout/_tours-swiper";
+@import "layout/_about-tours";
+@import "layout/_help-search";
+@import "layout/_footer";
