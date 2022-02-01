@@ -1,1 +1,2 @@
 var tourSwiper=new Swiper(".tours-swiper",{spaceBetween:5,freeMode:!0,loop:!0,pagination:{el:".swiper-pagination",clickable:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},breakpoints:{180:{slidesPerView:1},300:{slidesPerView:2},600:{slidesPerView:3},1200:{slidesPerView:4}}});
+//# sourceMappingURL=swiper.js.map
