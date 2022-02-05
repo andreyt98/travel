@@ -2,13 +2,23 @@
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 28%;
+  grid-auto-columns: 32%;
   gap: 0.2rem;
 
   padding-bottom: 0.3rem;
 
+  overflow: hidden;
+
+  @media #{$phone-up} {
+    grid-auto-columns: 32%;
+  }
+  @media #{$tab-up} {
+    grid-auto-columns: 23%;
+  }
   @media #{$tab-port-up} {
     grid-auto-columns: 21%;
   }
+ 
 
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -51,9 +61,17 @@
       opacity: 0;
       transition: all 0.4s;
 
-      font-size: 90%;
+      font-size: 80%;
 
       padding-inline: 0.2rem;
+
+
+      @media #{$phone-down}{
+        font-size: 50%;
+      }
+      @media #{$tab-up}{
+        font-size: 90%;
+      }
     }
 
     &:hover .gradient-bg {

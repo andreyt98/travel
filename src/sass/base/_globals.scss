@@ -8,6 +8,10 @@
 
 .slider::-webkit-scrollbar {
   height: .65rem;
+
+  @media #{$tab-port-down}{
+    height: 0;
+  }
 }
 
 .slider::-webkit-scrollbar-track {
