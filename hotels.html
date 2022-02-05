@@ -4,31 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    
     <link rel="icon" href="img/favicon.svg" />
+    
+    <title>Travel - Hotels</title>
 
-    <!-- font awesome icons cdn -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- ---------------------- -->
 
-    <!-- monserrat font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap"
-      rel="stylesheet"
-    />
-
+    <!-- preload for css stylesheet -->
+    <link rel="preload" href="public/css/main.css" as="style">
     <!-- main css stylesheet -->
     <link rel="stylesheet" href="public/css/main.css" />
 
-    <title>Travel - Hotels</title>
+
+    <!-- preload for font -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" as="font" crossorigin="crossorigin">
+    <!-- Nunito font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet"/>
+    
+
+    <!-- font awesome icons cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ---------------------- -->
+
+   
+
   </head>
 
   <body>
@@ -351,15 +352,9 @@
       </div>
       <p class="creator">Made by Andrey Torrente, 2021.</p>
       <div class="mysocials">
-        <a href="https://github.com/andreyts98" target="_blank"
-          ><i class="fab fa-github"></i
-        ></a>
-        <a href="#" target="_blank" onclick="return false"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-        <a href="#" target="_blank" onclick="return false"
-          ><i class="fab fa-instagram"></i
-        ></a>
+        <a href="https://github.com/andreyts98" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> GitHub</a>
+        <a href="#" target="_blank" onclick="return false"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="#" target="_blank" onclick="return false"><i class="fab fa-instagram"></i> Instagram</a>       
       </div>
     </footer>
     <!--............-->
