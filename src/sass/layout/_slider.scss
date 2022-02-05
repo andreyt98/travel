@@ -1,22 +1,20 @@
 .slider {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 28%;
-  grid-auto-columns: 32%;
+  grid-auto-columns: 37%;
   gap: 0.2rem;
 
   padding-bottom: 0.3rem;
 
   overflow: hidden;
 
-  @media #{$phone-up} {
-    grid-auto-columns: 32%;
-  }
+
   @media #{$tab-up} {
-    grid-auto-columns: 23%;
+    grid-auto-columns: 27%;
   }
+
   @media #{$tab-port-up} {
-    grid-auto-columns: 21%;
+    grid-auto-columns: 24%;
   }
  
 
@@ -43,11 +41,12 @@
       cursor: pointer;
       transition: all 0.3s;
       user-select: none;
+      font-size: 150%;
     }
 
     .heart-clicked {
       color: $primary;
-      transform: scale(1.3);
+      transform: scale(1.4);
     }
 
     .gradient-bg {
@@ -58,6 +57,7 @@
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
+      visibility: hidden;
       opacity: 0;
       transition: all 0.4s;
 
@@ -75,7 +75,9 @@
     }
 
     &:hover .gradient-bg {
+      visibility: visible;
       opacity: 1;
+
     }
   }
 }
