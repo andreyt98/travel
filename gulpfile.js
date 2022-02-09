@@ -5,30 +5,39 @@ const htmlmin = require("gulp-htmlmin");
 const imgmin = require("gulp-imagemin");
 
 
+const paths = {
+  sass: "./src/sass/**/*.scss",
+  css: "./public/css",
+  js: "./src/js/*.js",
+  jsPublic: "./public/js",
+  html: "./*.html",
+  rootPublic: "./public/",
+}
+
 function compileSass() {
-  return src("./src/sass/**/*.scss", {sourcemaps: true})
+  return src(paths.sass, {sourcemaps: true})
     .pipe(
       sass({
         outputStyle: "compressed",
       })
     )
-    .pipe(dest("./public/css", {sourcemaps: '.'}));
+    .pipe(dest(paths.css, {sourcemaps: '.'}));
 }
 
 function watchSass() {
-  watch("./src/sass/**/*.scss", compileSass);
+  watch(paths.sass, compileSass);
 }
 
 function uglifyjs() {
-  return src("./src/js/*.js")
+  return src(paths.js)
     .pipe(uglify())
-    .pipe(dest("./public/js"));
+    .pipe(dest(paths.jsPublic));
 }
 
 function minifyhtml() {
-  return src("./*.html")
+  return src(paths.html)
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(dest("./public/"));
+    .pipe(dest(paths.rootPublic));
 }
 
 function minimg() {
