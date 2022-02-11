@@ -1,440 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Travel - the best experiences around!">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Travel - the best experiences around!" />
     <!-- favicon -->
-    <link rel="icon" href="img/favicon.svg">
-    
+    <link rel="icon" href="img/favicon.svg" />
+
     <title>Travel - The best experiences around!</title>
-    
+
     <!-- preload for css stylesheet -->
-    <link rel="preload" href="public/css/main.css" as="style">
+    <link rel="preload" href="public/css/main.css" as="style" />
     <!-- main css stylesheet -->
-    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="public/css/main.css" />
 
-    <!-- preload for font -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" as="font" crossorigin="crossorigin">
     <!-- Nunito font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet"> 
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- font awesome icons cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!--....................-->
+  </head>
 
+  <body>
+    <div class="preloader">
+      <div class="preloader__content">
+        <i class="fas fa-location-arrow arrow"></i>
+      </div>
+    </div>
+    <!--............-->
 
+    <header class="header white-space-no-wrap">
+      <div class="logo-container">
+        <a href="#" class="logo">
+          <i class="fas fa-location-arrow"></i> Travel</a
+        >
+      </div>
 
-    </head>
+      <nav class="nav">
+        <ul class="nav__menu">
+          <li><a href="#">Home</a></li>
+          <li class="hotels-link"><a href="#">Hotels</a></li>
+          <li class="tours-link"><a href="#">Tours</a></li>
+          <li class="more-link"><a href="#">More</a></li>
+        </ul>
 
-    <body>
+        <p class="nav__burger">&#8801;</p>
+      </nav>
+    </header>
+    <!--............-->
 
-        <div class="preloader">
-            <div class="preloader__content">
-                <i class="fas fa-location-arrow arrow"></i>
-            </div>
+    <div class="hero">
+      <video class="hero__video" autoplay loop muted>
+        <source src="img/pool.mp4" type="video/mp4" />
+      </video>
+
+      <div class="gradient-bg"></div>
+
+      <div class="hero__header">
+        <h1>Travel and explore the life you always dreamed of</h1>
+
+        <div class="search-bar">
+          <form class="search-form" onsubmit="return false">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="search a place"
+              class="input"
+            />
+            <input type="submit" value="Search" class="btn" />
+          </form>
+          <p class="txt hidden"></p>
         </div>
-        <!--............-->
+      </div>
+    </div>
+    <!--............-->
 
-        <header class="header white-space-no-wrap">
+    <main class="main">
+      <!-- HOTELS SECTION -->
+      <section class="hotels-section" id="section-one">
+        <h2>
+          | Looking for a hotel to stay?
+          <a href="hotels.html" class="more">
+            Watch More
+            <span>&#10140;</span>
+          </a>
+        </h2>
 
-            <div class="logo-container" >
-                <a href="#" class="logo"> <i class="fas fa-location-arrow"></i> Travel</a>
-            </div>
+        <!-- content added with JS -->
+        <div class="hotel-grid"></div>
+      </section>
+      <!--............-->
 
-            <nav class="nav">
-                <ul class="nav__menu">
-                    <li><a href="#">Home</a></li>
-                    <li class="hotels-link"><a href="#">Hotels</a></li>
-                    <li class="tours-link"><a href="#">Tours</a></li>
-                    <li class="more-link"><a href="#">More</a></li>
-                </ul>
-            
-                <p class="nav__burger">&#8801;</p>
-            </nav>
+      <!-- TOURS SECTION -->
+      <section class="tours-section" id="section-two">
+        <h2>| View our weekly tours!</h2>
 
-        </header>
-        <!--............-->
+        <div class="slider">
 
-        <div class="hero">
- 
-            <video class="hero__video" autoplay loop muted>
-                <source src="img/pool.mp4" type="video/mp4">  
-                
-            </video>  
+          <!-- <div class="slider__nav">
 
-            <div class="gradient-bg">
-            </div>
-
-            <div class="hero__header">
-                <h1 >Travel and explore the life you always dreamed of</h1>
-                
-                <div class="search-bar">
-                    <form class = "search-form" onsubmit="return false" >
-                        <input type="text" name="search" id="search" placeholder="search a place" class="input">
-                        <input type="submit" value="Search" class="btn">
-                    </form>
-                    <p class="txt hidden"></p>
-                </div>
-            </div>
-
+            </div> -->
         </div>
-        <!--............-->
+      </section>
+      <!--............-->
 
-        <main class="main">
+      <!-- ABOUT TOURS SECTION -->
+      <section class="about-section">
+        <h2>Why join us?</h2>
+        <div class="about-section__content">
+          <div class="location">
+            <p>Around the world locations</p>
+            <i class="fas fa-globe-americas"></i>
+          </div>
 
-            <!-- HOTELS SECTION -->
-            <section class="hotels-section" id="section-one" >
+          <div class="locals">
+            <p>Tours run by local specialists</p>
+            <i class="fas fa-hiking"></i>
+          </div>
 
-                <h2> 
-                    | Looking for a hotel to stay?
-                    <a href="hotels.html" class="more">
-                        Watch More 
-                        <span>&#10140;</span>
-                    </a>
-                </h2>
+          <div class="price">
+            <p>Food and supplements included</p>
+            <i class="fas fa-people-carry"></i>
+          </div>
+        </div>
+      </section>
 
-                <div class="hotel-grid">
+      <!-- HELP SEARCH SECTION -->
+      <section class="help-search">
+        <div class="help-search__container">
+          <div class="text">
+            <h2>Don't know where to go?</h2>
+            <a href="#" class="btn"> Search for me</a>
+          </div>
 
-                    <div class="hotel-card-grid " >
+          <div class="image">
+            <img src="img/search-baner.webp" alt="" />
+          </div>
+          <div class="gradient-bg"></div>
+        </div>
+      </section>
+      <!-- .......... -->
+    </main>
+    <!--............-->
 
-                        <div class="hotel-image-container" >
-                            <img src="img/hotels/hotel-1.webp" alt="" width = "150" height = "95" loading="lazy" >
+    <!-- FOOTER -->
+    <footer class="footer" id="section-three">
+      <div class="footer__content">
+        <div class="info">
+          <h2>
+            <a href="#" class="logo">
+              <i class="fas fa-location-arrow"></i> Travel
+            </a>
+          </h2>
 
-                        </div>
+          <div class="socials">
+            <a href="#" aria-label="twitter" onclick="return false"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" aria-label="instagram" onclick="return false"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="facebook" onclick="return false"
+              ><i class="fab fa-facebook"></i
+            ></a>
+          </div>
+        </div>
+        <div class="contact">
+          <h2>Contact info</h2>
+          <p>travel@email.com</p>
+          <p>+123-456-789</p>
+          <p>San José, Costa Rica</p>
+        </div>
 
-                        <div class="hotel-info">
-                            <p>Jade Mountain, St. Lucia </p>
-                            <p>$1200</h3>
-                            <p class="stars">
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                             </p>
-                            <a href="#" class="btn">Book</a>
-                        </div>
-                    </div>
+        <div class="newsletter">
+          <h2>Newsletter</h2>
+          <p>get news on incredible offers!</p>
 
-                    <div class="hotel-card-grid ">
-                        <div class="hotel-image-container" >
-                            <img src="img/hotels/hotel-2.webp" alt="" width = "150" height = "95" loading="lazy" >
-                        </div>
+          <form onsubmit="return false" class="news-form">
+            <input
+              type="email"
+              name="sub"
+              id="sub"
+              placeholder="Enter your email"
+              class="input"
+            />
+            <input type="submit" value="Subscribe" class="btn" />
+          </form>
+        </div>
+      </div>
 
-                        <div class="hotel-info">
-                            <p>Canaves Oia Epitome, Greece</p>
-                            <p>$1200</p>
-                           <p class="stars">
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                             </p>
+      <div class="subscribe-banner">
+        <i class="fas fa-times xx"></i>
+        <h2>
+          Thank you for subscribing!
+          <span><i class="far fa-check-circle"></i></span>
+        </h2>
 
-                            <a href="#" class="btn">Book</a>
-                        </div>
-                    </div>
+        <h3>
+          We'll make sure you receive the best offers to discover amazing
+          places!
+        </h3>
+      </div>
 
-                    <div class="hotel-card-grid ">
-                        <div class="hotel-image-container" >
-                            <img src="img/hotels/hotel-3.webp" alt="" width = "150" height = "95" loading="lazy" >
+      <p class="creator">Made by Andrey Torrente, 2021.</p>
 
-                        </div>
+      <div class="mysocials">
+        <a href="https://github.com/andreyts98" target="_blank" rel="noreferrer"
+          ><i class="fab fa-github"></i> GitHub</a
+        >
+        <a href="#" target="_blank" onclick="return false"
+          ><i class="fab fa-linkedin"></i> LinkedIn</a
+        >
+        <a href="#" target="_blank" onclick="return false"
+          ><i class="fab fa-instagram"></i> Instagram</a
+        >
+      </div>
+    </footer>
+    <!--............-->
 
-
-                        <div class="hotel-info">
-                            <p>St. Regis Bora Bora Resort, French Polynesia</p>
-                            <p>$1200</h3>
-                            <p class="stars">
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                             </p>
-                            <a href="#" class="btn">Book</a>
-                        </div>
-                    </div>
-
-                    <div class="hotel-card-grid ">
-                        <div class="hotel-img">
-                            <img src="img/hotels/hotel-4.webp" alt="" width = "150" height = "95" loading="lazy" >
-
-                        </div>
-
-                        <div class="hotel-info">
-                            <p>Astarte Suites Hotel, Greece</p>
-                            <p>$1200</p>
-                            <p class="stars">
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                             </p>
-                            <a href="#" class="btn">Book</a>
-                        </div>
-                    </div>
-                
-                    <div class="hotel-card-grid ">
-                        <div class="hotel-img">
-                            <img src="img/hotels/hotel-5.webp" alt="" width = "150" height = "95" loading="lazy" >
-
-                        </div>
-
-                        <div class="hotel-info">
-                            <p>InterContinental Bora Bora Resort & Spa, French Polynesia  </p>
-                            <p>$1200</p>
-                            <p class="stars">
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                             </p>
-                            <a href="#" class="btn">Book</a>
-                        </div>
-                    </div>
-                    <div class="hotel-card-grid ">
-                        <div class="hotel-img">
-                            <img src="img/hotels/hotel-6.webp" alt="" width = "150" height = "95" loading="lazy" >
-
-                        </div>
-
-                        <div class="hotel-info">
-                            <p>Mahekal Beach Resort, Playa del Carmen, Mexico</p>
-                            <p>$1200</p>
-                            <p class="stars">
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                                &#9733;
-                             </p>
-                            <a href="#" class="btn">Book</a>
-                        </div>
-                    </div>
-                    
-                
-                
-                
-                
-                </div>
-
-            </section>
-            <!--............-->
-
-            <!-- TOURS SECTION -->
-            <section class="tours-section" id="section-two">
-                <h2>| View our weekly tours!</h2>
-
-                <div class="slider">
-
-                    <div class="slider__element">
-                        <div class="gradient-bg">
-                                <p>Snorkelling in the Maldives</p>
-                                <p>$2000</p>
-                                <p class="heart">&#9829;</p>
-                        </div>
-                        <img src="img/tours/tour-7.webp" alt="tours-image" width="200" height="200">
-                    </div>
-
-                    <div class="slider__element">
-                        <div class="gradient-bg">
-                                <p>Exploring Peru</p>
-                                <p>$2000</p>
-                                <p class="heart">&#9829;</p>
-                        </div>
-                        <img src="img/tours/tour-1.webp" alt="tours-image" width="200" height="200">
-                    </div>
-
-                    <div class="slider__element">
-                        <div class="gradient-bg">
-                                <p>Cruise the Antartic Peninsula</p>
-                                <p>$2000</p>
-                                <p class="heart">&#9829;</p>
-                        </div>
-                        <img src="img/tours/tour-2.webp" alt="tours-image" width="200" height="200">
-                    </div>
-
-                    <div class="slider__element">
-                        <div class="gradient-bg">
-                                <p>Wildlife of Africa</p>
-                                <p>$2000</p>
-                                <p class="heart">&#9829;</p>
-                        </div>
-                        <img src="img/tours/tour-3.webp" alt="tours-image" width="200" height="200">
-                    </div>
-
-                    <div class="slider__element">
-                        <div class="gradient-bg">
-                                <p>Treasures of Beijing</p>
-                                <p>$2000</p>
-                                <p class="heart">&#9829;</p>
-                        </div>
-                        <img src="img/tours/tour-4.webp" alt="tours-image" width="200" height="200">
-                    </div>
-
-                    <div class="slider__element">
-                        <div class="gradient-bg">
-                                <p>Central America Discovery</p>
-                                <p>$2000</p>
-                                <p class="heart">&#9829;</p>
-                        </div>
-                        <img src="img/tours/tour-5.webp" alt="tours-image" width="200" height="200">
-                    </div>
-
-                    <div class="slider__element">
-                        <div class="gradient-bg">
-                                <p>Float down the treasures of Egip</p>
-                                <p>$2000</p>
-                                <p class="heart">&#9829;</p>
-                        </div>
-                        <img src="img/tours/tour-6.webp" alt="tours-image" width="200" height="200">
-                    </div>
-
-                    <div class="slider__element">
-                        <div class="gradient-bg">
-                                <p>Camp under Findland lights</p>
-                                <p>$2000</p>
-                                <p class="heart">&#9829;</p>
-                        </div>
-                        <img src="img/tours/tour-8.webp" alt="tours-image" width="200" height="200">
-                    </div>
-
-                    <div class="slider__element">
-                        <div class="gradient-bg">
-                                <p>Landscape tent in Mongolia</p>
-                                <p>$2000</p>
-                                <p class="heart">&#9829;</p>
-                        </div>
-                        <img src="img/tours/tour-9.webp" alt="tours-image" width="200" height="200">
-                    </div>
-
-                    <div class="slider__element">
-
-                        <div class="gradient-bg">
-                                <p>Historical tour in Georgia</p>
-                                <p>$2000</p>
-                                <p class="heart">&#9829;</p>
-                        </div>
-                        <img src="img/tours/tour-10.webp" alt="tours-image" width="200" height="200" ">
-                    </div>
-
-                </div>
-
-            </section>
-            <!--............-->
-
-            <!-- ABOUT TOURS SECTION -->
-            <section class="about-section" >
-                <h2>Why join us?</h2>
-                <div class="about-section__content">
-
-                    <div class="location">
-                        <p>Around the world locations</p>
-                        <i class="fas fa-globe-americas"></i>
-                    </div>
-
-                    <div class="locals">
-                        <p>Tours run by local specialists</p>
-                        <i class="fas fa-hiking"></i>
-                    </div>
-
-                    <div class="price">
-                        <p>Food and supplements included</p>
-                        <i class="fas fa-people-carry"></i>
-                    </div>
-
-                </div>
-            </section>
-
-               <!-- HELP SEARCH SECTION -->
-            <section class="help-search" >
-
-                <div class="help-search__container">
-
-
-                    <div class="text">
-                        <h2>Don't know where to go?</h2>
-                        <a href="#" class="btn"> Search for me</a>
-
-                    </div>
-
-                    <div class="image">
-                        <img src="img/search-baner.webp" alt="">
-                    </div>
-                    <div class="gradient-bg"></div>
-
-                </div>
-            </section>
-            <!-- .......... -->
-
-        </main>
-        <!--............-->
-
-        <!-- FOOTER -->
-        <footer class="footer" id="section-three">
-
-            <div class="footer__content">
-
-                <div class="info" >
-                    <h2 >
-
-                        <a href="#" class="logo"> <i class="fas fa-location-arrow"></i> Travel </a>
-
-                    </h2>
-
-                    <div class="socials">
-                        <a href="#" aria-label="twitter" onclick="return false"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="instagram" onclick="return false"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="facebook" onclick="return false"><i class="fab fa-facebook"></i></a>
-                    </div>
-                </div>
-                <div class="contact">
-                    <h2>Contact info</h2>
-                    <p>travel@email.com</p>
-                    <p>+123-456-789</p>
-                    <p>San José, Costa Rica</p>
-                </div>
-
-                <div class="newsletter">
-                    <h2>Newsletter</h2>
-                    <p>get news on incredible offers!</p>
-
-                    <form onsubmit="return false" class="news-form" >
-                        <input type="email" name="sub" id="sub" placeholder="Enter your email" class="input">
-                        <input type="submit" value="Subscribe" class="btn" >
-                    </form>
-                </div>
-            </div>
-
-            <div class="subscribe-banner ">
-                <i class="fas fa-times xx"></i>
-                <h2>Thank you for subscribing! <span><i class="far fa-check-circle"></i></span></h2>
-                
-                <h3>We'll make sure you receive the best offers to discover amazing places!</h3>
-
-            </div>
-            
-            <p class="creator"> Made by Andrey Torrente, 2021. </p>
-
-            <div class="mysocials">
-                <a href="https://github.com/andreyts98" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> GitHub</a>
-                <a href="#" target="_blank" onclick="return false"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="#" target="_blank" onclick="return false"><i class="fab fa-instagram"></i> Instagram</a>       
-            </div>
-                
-        </footer>
-        <!--............-->
-    
-        <script src="public/js/app.js"></script>
-        <script src="public/js/scrollTo.js"></script>
-    </body>
-
+    <script src="public/js/index/app.js"></script>
+    <script src="public/js/index/scrollTo.js"></script>
+    <script src="public/js/index/tours-section.js"></script>
+    <script src="public/js/index/hotels-main.js"></script>
+  </body>
 </html>

@@ -12,14 +12,6 @@ burger.addEventListener("click", () => {
   menuContent.classList.toggle("menu__active");
 });
 
-const heart = document.querySelectorAll(".heart");
-
-heart.forEach(function (heart) {
-  heart.addEventListener("click", function () {
-    heart.classList.toggle("heart-clicked");
-  });
-});
-
 const menuLinks = document.querySelectorAll(".nav__menu a");
 
 menuLinks.forEach(function (menuLinks) {

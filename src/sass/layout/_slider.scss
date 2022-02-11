@@ -8,7 +8,6 @@
 
   overflow: hidden;
 
-
   @media #{$tab-up} {
     grid-auto-columns: 27%;
   }
@@ -16,7 +15,6 @@
   @media #{$tab-port-up} {
     grid-auto-columns: 24%;
   }
- 
 
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -65,11 +63,10 @@
 
       padding-inline: 0.2rem;
 
-
-      @media #{$phone-down}{
+      @media #{$phone-down} {
         font-size: 50%;
       }
-      @media #{$tab-up}{
+      @media #{$tab-up} {
         font-size: 90%;
       }
     }
@@ -77,7 +74,6 @@
     &:hover .gradient-bg {
       visibility: visible;
       opacity: 1;
-
     }
   }
 }
