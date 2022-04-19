@@ -17,15 +17,12 @@
 
   .nav {
     @include flex($justify: space-between, $align: center);
-
     overflow: hidden;
 
     &__burger {
       position: relative;
-
       display: block;
       color: $primary;
-
       cursor: pointer;
       text-align: center;
       user-select: none;
@@ -42,14 +39,11 @@
       @include position(absolute, $top: 0rem, $right: -101%);
       @include flex($direction: column, $justify: flex-start, $align: center);
       box-shadow: 5px 5px 10px 8px #00000052;
-
       gap: 2rem;
       padding: 8rem 2rem;
       width: 50%;
       background-color: $lightBlack;
       background: linear-gradient(147deg, #153b64 0%, #224466 74%);
-
-      // text-align: center;
       transition: background, right 0.3s;
       text-align: left;
       height: 100vh;
