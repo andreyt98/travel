@@ -3,10 +3,10 @@
   grid-auto-flow: column;
   grid-auto-columns: 37%;
   gap: 0.2rem;
-
   padding-bottom: 0.3rem;
-
   overflow: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 
   @media #{$tab-up} {
     grid-auto-columns: 27%;
@@ -16,13 +16,9 @@
     grid-auto-columns: 24%;
   }
 
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-
   &__element {
     position: relative;
     border-radius: 8px;
-
     scroll-snap-align: start;
     grid-template-rows: min-content;
     text-align: center;
@@ -58,9 +54,7 @@
       visibility: hidden;
       opacity: 0;
       transition: all 0.4s;
-
       font-size: 80%;
-
       padding-inline: 0.2rem;
 
       @media #{$phone-down} {
