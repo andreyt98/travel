@@ -1,5 +1,4 @@
 // HELP SEARCH
-
 .help-search {
   height: 25.5rem;
   overflow: hidden;
@@ -22,10 +21,6 @@
       @include position(absolute, $top: 20%);
       z-index: 1;
       color: white;
-
-      @media #{$phone-up} {
-        // font-size: 1.3rem;
-      }
 
       h2 {
         font-size: 2rem;
