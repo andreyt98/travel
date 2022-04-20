@@ -26,19 +26,22 @@
   }
 
   .location {
-    i {
+    svg {
+      width: 15%;
       color: rgb(33, 197, 252);
     }
   }
 
   .locals {
-    i {
+    svg {
+      width: 15%;
       color: rgb(66, 224, 35);
     }
   }
 
   .price {
-    i {
+   svg {
+     width: 15%;
       color: rgb(255, 217, 0);
     }
   }

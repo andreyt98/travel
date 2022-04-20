@@ -59,12 +59,13 @@
     padding: 5rem;
     transition: all 0.7s;
 
-    .fa-check-circle {color: yellowgreen;}
-    .fa-times {
+    
+    .xx {
       @include position(absolute, $top: 1rem, $right: 1rem);
       cursor: pointer;
       color: $white;
       font-size: 120%;
+      font-weight: 800;
     }
 
     h2,
@@ -79,11 +80,5 @@
     width: 45%;
     @include horizontal-center();
   }
-  .mysocials,
-  .socials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-  }
+
 }
