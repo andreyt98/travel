@@ -1,19 +1,25 @@
 {
   "name": "travel",
   "version": "1.0.0",
-  "description": "",
+  "description": "[DEMO](https://andreyt98.github.io/travel/)",
   "main": "index.js",
-  "scripts": {},
-  "keywords": [],
+  "scripts": {
+    "buildsass": "sass --watch --style=compressed ./src/sass/main.scss:./public/css/main.css",
+    "uglifyjs": "uglifyjs ./src/js/*.js --source-map url=app.min.js.map,includeSources -c -m  -o ./public/app.min.js ",
+    "watchjs": "watch 'npm run uglifyjs' src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreyt98/travel.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreyt98/travel/issues"
+  },
+  "homepage": "https://github.com/andreyt98/travel#readme",
   "devDependencies": {
-    "dart-sass": "^1.25.0",
-    "gulp": "^4.0.2",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^7.0.0",
-    "gulp-sass": "^5.0.0",
-    "gulp-uglify": "^3.0.2",
-    "sass": "^1.43.4"
+    "uglify-js": "^3.15.4",
+    "watch": "^1.0.2"
   }
 }
