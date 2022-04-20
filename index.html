@@ -51,10 +51,10 @@
 
       <nav class="nav">
         <ul class="nav__menu">
-          <li><a href="#">Home</a></li>
-          <li class="hotels-link"><a href="#">Hotels</a></li>
-          <li class="tours-link"><a href="#">Tours</a></li>
-          <li class="more-link"><a href="#">More</a></li>
+          <li ><a class="link" href="#">Home</a></li>
+          <li class="hotels-link"><a class="link" href="#">Hotels</a></li>
+          <li class="tours-link"><a class="link" href="#">Tours</a></li>
+          <li class="more-link"><a class="link" href="#">More</a></li>
         </ul>
 
         <p class="nav__burger">&#8801;</p>
@@ -73,7 +73,7 @@
         <h1>Travel and explore the life you always dreamed of</h1>
 
         <div class="search-bar">
-          <form class="search-form" onsubmit="return false">
+          <form class="search-form">
             <input
               type="text"
               name="search"
@@ -81,7 +81,7 @@
               placeholder="search a place"
               class="input"
             />
-            <input type="submit" value="Search" class="btn" />
+            <input type="submit" value="Search" class="btn" id="search-btn" />
           </form>
           <p class="txt hidden"></p>
         </div>
@@ -94,7 +94,7 @@
       <section class="hotels-section" id="section-one">
         <h2>
           | Looking for a hotel to stay?
-          <a href="hotels.html" class="more">
+          <a href="#" class="more">
             Watch More
             <span>&#10140;</span>
           </a>
@@ -110,7 +110,6 @@
         <h2>| View our weekly tours!</h2>
 
         <div class="slider">
-
           <!-- <div class="slider__nav">
 
             </div> -->
@@ -168,13 +167,11 @@
           </h2>
 
           <div class="socials">
-            <a href="#" aria-label="twitter" onclick="return false"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a href="#" aria-label="instagram" onclick="return false"
+            <a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="instagram"
               ><i class="fab fa-instagram"></i
             ></a>
-            <a href="#" aria-label="facebook" onclick="return false"
+            <a href="#" aria-label="facebook"
               ><i class="fab fa-facebook"></i
             ></a>
           </div>
@@ -190,7 +187,7 @@
           <h2>Newsletter</h2>
           <p>get news on incredible offers!</p>
 
-          <form onsubmit="return false" class="news-form">
+          <form class="news-form">
             <input
               type="email"
               name="sub"
@@ -198,7 +195,7 @@
               placeholder="Enter your email"
               class="input"
             />
-            <input type="submit" value="Subscribe" class="btn" />
+            <input type="submit" value="Subscribe" class="btn btn-submit" />
           </form>
         </div>
       </div>
@@ -222,19 +219,14 @@
         <a href="https://github.com/andreyts98" target="_blank" rel="noreferrer"
           ><i class="fab fa-github"></i> GitHub</a
         >
-        <a href="#" target="_blank" onclick="return false"
-          ><i class="fab fa-linkedin"></i> LinkedIn</a
-        >
-        <a href="#" target="_blank" onclick="return false"
+        <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="#" target="_blank"
           ><i class="fab fa-instagram"></i> Instagram</a
         >
       </div>
     </footer>
     <!--............-->
 
-    <script src="public/js/index/app.js"></script>
-    <script src="public/js/index/scrollTo.js"></script>
-    <script src="public/js/index/tours-section.js"></script>
-    <script src="public/js/index/hotels-main.js"></script>
+    <script src="public/app.min.js"></script>
   </body>
 </html>
