@@ -7,7 +7,8 @@ const hotelNamesObject1 = {
   n5: "Soneva Fushi, Maldives",
   n6: "Mahekal Beach Resort, Playa del Carmen, Mexico",
 };
-
+const hotelGridContainer = document.querySelector(".hotel-grid");
+const DocumentFrag = document.createDocumentFragment();
 for (let i = 1; i <= 6; i++) {
   //creating parent div
   const hotelCard = document.createElement("DIV");
@@ -54,14 +55,8 @@ for (let i = 1; i <= 6; i++) {
   hotelCard.append(imgs, hotelInfo);
 
   //append the hotel card to its grid parent container 'hotelGridContainer'
-  const hotelGridContainer = document.querySelector(".hotel-grid");
-  hotelGridContainer.appendChild(hotelCard);
+  
+  DocumentFrag.appendChild(hotelCard);
+
 }
-
-const btns = document.querySelectorAll(".main .btn");
-
-btns.forEach(function (e) {
-  e.addEventListener("click", function (evt) {
-    evt.preventDefault();
-  });
-});
+hotelGridContainer.appendChild(DocumentFrag);

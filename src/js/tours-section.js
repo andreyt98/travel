@@ -11,7 +11,8 @@ const tourNamesObject = {
   n9: "Landscape tent in Mongolia",
   n10: "Historical tour in Georgia",
 };
-
+const slider = document.querySelector(".slider");
+// const DocumentFrag = document.createDocumentFragment();
 for (let i = 1; i <= 10; i++) {
   //creating parent div
   const sliderElement = document.createElement("DIV");
@@ -53,19 +54,9 @@ for (let i = 1; i <= 10; i++) {
   imgs.width = "200";
   imgs.height = "200";
 
-  //appending images and infoto parent div
+  //appending images and info to parent div
   sliderElement.append(gradientBg, imgs);
-
-  //append the img to its grid parent container 'hotelGridContainer'
-  const slider = document.querySelector(".slider");
-  slider.appendChild(sliderElement);
+  
+  DocumentFrag.appendChild(sliderElement)
 }
-
-
-const heart = document.querySelectorAll(".heart");
-
-heart.forEach(function (heart) {
-  heart.addEventListener("click", function () {
-    heart.classList.toggle("heart-clicked");
-  });
-});
+slider.appendChild(DocumentFrag);
