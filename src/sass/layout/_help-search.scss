@@ -13,10 +13,8 @@
     height: 100%;
     width: 100%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+    @include flex($direction: column, $align:center);
+    
     .text {
       @include position(absolute, $top: 20%);
       z-index: 1;

@@ -77,8 +77,7 @@
     h3 {font-weight: 400;}
   }
   .logo {
-    width: 45%;
-    @include horizontal-center();
+    display: inline-block;
   }
 
 }

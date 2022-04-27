@@ -12,17 +12,11 @@
   left: $left;
 }
 
-@mixin flex($direction: null, $justify: null, $align: null) {
+@mixin flex($direction: null, $justify: null, $align: null,
+$gap: null) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
-}
-
-@mixin horizontal-center {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
+  gap: $gap;
 }
