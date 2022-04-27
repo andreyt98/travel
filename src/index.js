@@ -9,10 +9,6 @@ import {
 } from "./js/scrollTo";
 
 import { submitEmail } from "./js/submitEmail";
-// preloader
-window.onload = function () {
-  document.querySelector(".preloader").style.display = "none";
-};
 
 document.addEventListener("DOMContentLoaded", () => {
   createHotelElements();
