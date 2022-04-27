@@ -1,4 +1,6 @@
 
 # Frontend for a ficticious booking hotels and tours page
 
-[DEMO](https://andreyt98.github.io/travel/)
+- Used SASS to style components
+
+## Check the project on this [DEMO](https://andreyt98.github.io/travel/)
