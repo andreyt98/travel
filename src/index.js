@@ -47,14 +47,12 @@ document.addEventListener("click", (e) => {
 
   //hide menu when clicking on a link (on mobile)
   if (e.target.classList.contains("link")) {
-    e.target.parentElement.parentElement.classList.remove("menu__active");
+    document.querySelector('.nav').classList.remove("menu__active");
   }
 
   //show menu
   if (e.target.classList.contains("nav__burger")) {
-    e.target.parentElement.firstElementChild.classList.toggle("menu__active");
-
-    e.target.classList.toggle("burger__clicked");
+    document.querySelector('.nav').classList.toggle("menu__active");
   }
 
   //close banner

@@ -24,19 +24,22 @@
       <div class="logo-container">
         <a href="#" class="logo"> Travel</a>
       </div>
-
       <nav class="nav">
-        <ul class="nav__menu">
+
+        <ul class="nav-list">
           <li ><a class="link" href="#">Home</a></li>
           <li class=""><a class="link hotels-link" href="#">Hotels</a></li>
           <li class=""><a class="link tours-link" href="#">Tours</a></li>
           <li class=""><a class=" more-link" href="#">More</a></li>
-        </ul>
-
-        <p class="nav__burger">&#8801;</p>
+        </ul>  
+        
       </nav>
+
+      <p class="nav__burger">&#8801;</p>
     </header>
     <!--............-->
+
+    <div class="container">
 
     <div class="hero">
       <video class="hero__video" autoplay loop muted>
@@ -51,7 +54,7 @@
         <div class="search-bar">
           <form class="search-form">
             <input
-              type="text"
+              type="search"
               name="search"
               id="search"
               placeholder="search a place"
@@ -83,11 +86,6 @@
 
       <!-- TOURS SECTION -->
       <section class="tours-section" id="section-two">
-        <h2>| View our weekly tours!</h2>
-
-        <div class="slider">
-
-        </div>
       </section>
       <!--............-->
 
@@ -140,26 +138,17 @@
     <!-- FOOTER -->
     <footer class="footer" id="section-three">
       <div class="footer__content">
-        <div class="info">
-          <h2>
-            <a href="#" class="logo">
-             Travel
-            </a>
-          </h2>
-
-          <div class="socials">
-            <a href="#" >twitter</i></a>
-          
-          </div>
+        <div class="column">
+          <h2>Travel</h2>
+          <a href="#" >Instagram</a>
         </div>
-        <div class="contact">
+        <div class="column">
           <h2>Contact info</h2>
           <p>travel@email.com</p>
           <p>+123-456-789</p>
-          <p>San José, Costa Rica</p>
         </div>
 
-        <div class="newsletter">
+        <div class="column">
           <h2>Newsletter</h2>
           <p>get news on incredible offers!</p>
 
@@ -171,7 +160,8 @@
               placeholder="Enter your email"
               class="input"
             />
-            <input type="submit" value="Subscribe" class="btn btn-submit" />
+            <button type="submit" class="btn btn-submit" >Subscribe</button>
+
           </form>
         </div>
       </div>
@@ -193,5 +183,6 @@
     </footer>
     <!--............-->
 
+    </div>
   </body>
 </html>

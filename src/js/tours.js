@@ -1,62 +1,54 @@
 export const createTourElements = () => {
   // creation of hotel section content
-  const tourNamesObject = {
-    n1: "Snorkelling in the Maldives",
-    n2: "Exploring Peru",
-    n3: "Cruise the Antartic Peninsula",
-    n4: "Wildlife of Africa",
-    n5: "Treasures of Beijing",
-    n6: "Central America Discovery",
-    n7: "Float down the treasures of Egip",
-    n8: "Camp under Findland lights",
-    n9: "Landscape tent in Mongolia",
-    n10: "Historical tour in Georgia",
-  };
-  const slider = document.querySelector(".slider");
-  const DocumentFrag = document.createDocumentFragment();
-  for (let i = 1; i <= 10; i++) {
-    //creating parent div
-    const sliderElement = document.createElement("DIV");
+ 
+  const tourNames= [
+     "Snorkelling in the Maldives",
+     "Exploring Peru",
+     "Cruise the Antartic Peninsula",
+     "Wildlife of Africa",
+     "Treasures of Beijing",
+     "Central America Discovery",
+     "Float down the treasures of Egip",
+     "Camp under Findland lights",
+     "Landscape tent in Mongolia",
+     "Historical tour in Georgia",
+  ];
+  // const slider = document.querySelector(".slider");
+  // const DocumentFrag = document.createDocumentFragment();
+  const $sliderContainer = document.createElement("DIV");
+  $sliderContainer.classList.add("slider-container");
+$sliderContainer.innerHTML = `
+<div class="slider-header">
+  <h2> | View our weekly tours!</h2>
+  <div class="controls">
+   <p class="left"> < </p>
+   <p class="right"> > </p>
+  </div>
+  `;
 
-    //adding the class of parent div
-    sliderElement.classList.add("slider__element");
+  const $slider = document.createElement("DIV");
+      $slider.classList.add("slider");
 
-    //  creating the gradient bg div that contains the tour info and heart button
-    const gradientBg = document.createElement("DIV");
-
-    //creating div that contains the hotel info and booking botton
-    gradientBg.classList.add("gradient-bg");
-
-    // creating elements of hotel info
-
-    const tourTitle = document.createElement("P");
-    //'tourNames' has the value of every element of 'tourNamesObject'
-    const tourNames = Object.values(tourNamesObject);
-    // assign to 'hoteltitle' every element of 'hotelNames' with index i-1, since object iteration starts at 0 but we started 'i' at 1.
-    tourTitle.textContent = tourNames[i - 1];
-
-    const tourPrice = document.createElement("P");
-    tourPrice.textContent = "$2000";
-
-    const hearts = document.createElement("P");
-    hearts.classList.add("heart");
-    hearts.innerHTML = "&#9829;";
-
-    gradientBg.append(tourTitle, tourPrice, hearts);
-
-    //creating images
-    const imgs = document.createElement("IMG");
-
-    //adding the images attributes
-    imgs.src = `./assets/img/tours/tour-${i}.webp`;
-    imgs.alt = `hotel${i}`;
-    imgs.width = "200";
-    imgs.height = "200";
-
-    //appending images and info to parent div
-    sliderElement.append(gradientBg, imgs);
-
-    DocumentFrag.appendChild(sliderElement);
+      for (let i = 1; i <= 10; i++) {
+      const $content = document.createElement("DIV");
+        $content.classList.add("content");
+        $content.innerHTML = `
+        <img src= ./assets/img/tours/tour-${i}.webp class="content-img"></img>
+          <div class="overlay-bg">
+            <p>${tourNames[i]}</p>
+            <p>$2000</p>
+          </div> 
+        `;
+        $slider.append($content);
   }
-  slider.appendChild(DocumentFrag);
+  $sliderContainer.append($slider)
+  document.querySelector('#section-two').append($sliderContainer);
+
+  document.addEventListener('click', (evt) =>{
+    const elementToSlide = evt.target.parentElement.parentElement.nextElementSibling;
+    const screenWidth = screen.width;
+
+    if (evt.target.matches(`.left`)) elementToSlide.scrollBy(-(screenWidth / 2), 0);
+    if (evt.target.matches(`.right`)) elementToSlide.scrollBy(screenWidth / 2, 0);
+  })
 };

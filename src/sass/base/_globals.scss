@@ -6,54 +6,18 @@
   box-sizing: inherit;
 }
 
-.slider::-webkit-scrollbar {
-  height: .65rem;
-
-  @media #{$tab-port-down}{
-    height: 0;
-  }
-}
-
-.slider::-webkit-scrollbar-track {
-  background: #e0e0e0;
-  border-radius: 8px;
-}
-.slider::-webkit-scrollbar-thumb {
-  background: #47474749;
-  border-radius: 8px;
-  border: 1px solid #ffffff;
+.container{
+  transition: 0.3s;
 }
 
 html {
-  font-size: 62.5%;
-
-  scroll-behavior: smooth;
-
-  @media #{$phone-up} {
-    //300px +
-    font-size: .7rem;
-  }
-
-  @media #{$tab-up} {
-    //600px +
-    font-size: .85rem;
-  }
-
-  @media #{$tab-port-up} {
-    //900px +
-    font-size: .95rem;
-  }
-
-
-  @media #{$desktop-up} {
-    //1800px +
-    font-size: 2rem;
+  @media #{$xxl} {
+    font-size: 1.5rem;
   }
 }
 
 body {
   box-sizing: border-box;
-
   background-color: $lightWhite;
   color: $lightBlack;
   font-family: "Nunito", sans-serif;
@@ -74,31 +38,20 @@ li {
   white-space: nowrap;
 }
 
-main .hotels-section,
-.tours-section {
-  padding: 4rem .5rem 0;
-}
-
-.main section h2 {
-  margin-bottom: 1.3rem;
+.hotels-section,.tours-section {
+  padding: 0 1rem ;
+  margin: 1rem 0rem;
 }
 
 // anchor to the hotels page
 .more {
   font-weight: 900;
   color: $primaryDark;
-
   transition: all 0.3s;
-
   &:hover {
     transform: translateY(-5px);
   }
 }
-
-.margin {
-  margin: 3rem 0;
-}
-
 .hidden {
   display: none;
 }
