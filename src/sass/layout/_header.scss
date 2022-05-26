@@ -6,75 +6,78 @@
   z-index: 100;
   transition: background 0.7s;
 
-  @media #{$phone-down} {
-    background-color: $lightWhite;
-    box-shadow: 5px 5px 10px 1px #00000052;
-  }
-
-  .logo{
+  .logo {
     font-size: 140%;
     width: 30%;
   }
 
   .nav {
-    @include flex($justify: space-between, $align: center);
-    overflow: hidden;
+    @include position(absolute, $top: 0rem, $right: 0);
+    width: 0;
+    height: 100vh;
+    background: linear-gradient(147deg, #153b64 0%, #224466 74%);
+    box-shadow: 5px 5px 10px 8px #00000052;
+    transition: 0.3s;
+    overflow-x: hidden;
 
-    &__burger {
-      position: relative;
-      display: block;
-      color: $primary;
-      cursor: pointer;
-      text-align: center;
-      user-select: none;
-      font-size: 200%;
-      width: 100%;
-      height: 100%;
-
-      @media #{$tab-up} {
-        display: none;
-      }
-    }
-
-    &__menu {
-      @include position(absolute, $top: 0rem, $right: -101%);
-      @include flex($direction: column, $justify: flex-start, $align: center);
-      box-shadow: 5px 5px 10px 8px #00000052;
-      gap: 2rem;
-      padding: 8rem 2rem;
-      width: 50%;
-      background-color: $lightBlack;
-      background: linear-gradient(147deg, #153b64 0%, #224466 74%);
-      transition: background, right 0.3s;
-      text-align: left;
-      height: 100vh;
-
-      a {
-        color: $white;
-      }
-      a:hover {
-        color: $primary;
-      }
-
-      @media #{$tab-up} {
-        display: inline;
-        position: static;
-        width: auto;
-        height: auto;
-        padding: 0;
-        background: none;
-        opacity: 1;
-
-        li {
-          &:not(:last-of-type) {
-            margin-right: 1.5rem;
-          }
+    @media #{$sm} {
+      position: static;
+      width: auto;
+      height: auto;
+      background: none;
+      padding: 0;
+      box-shadow: none;
+      li {
+        &:not(:last-of-type) {
+          margin-right: 1.5rem;
         }
       }
     }
+  }
+  .nav-list {
+    padding: 4rem 1rem;
+    a {
+      padding: 1rem 0;
+      color: $white;
+      text-align: center;
+      &:hover {
+        color: $primary;
+      }
+      @media #{$sm} {
+        padding: 0;
+        display: inline;
+      }
+    }
+    li {
+      display: block;
+      text-align: center;
+      @media #{$sm} {
+        display: inline;
+      }
+    }
 
-    .menu__active {
-      right: 0;
+    @media #{$sm} {
+      width: auto;
+      padding: 0;
+      display: inline;
+    }
+  }
+
+  .nav__burger {
+    position: relative;
+    color: $primary;
+    cursor: pointer;
+    font-size: 200%;
+    @media #{$sm} {
+      display: none;
+    }
+  }
+
+  .menu__active {
+    width: 30%;
+    @media #{$sm} {
+      width: auto;
+      padding: 0;
     }
   }
 }
@@ -85,7 +88,7 @@
 
   .hotels-nav {
     a {
-      @media #{$tab-up} {
+      @media #{$sm} {
         color: $lightBlack;
 
         a:hover {
@@ -100,7 +103,7 @@
   background-color: $lightWhite;
   box-shadow: 5px 5px 10px 1px #00000052;
 
-  @media #{$tab-up} {
+  @media #{$sm} {
     .nav a {
       color: $lightBlack;
 

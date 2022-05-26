@@ -15,7 +15,7 @@
     grid-template-columns: 1fr;
     gap: 2rem;
 
-    @media #{$tab-up} {
+    @media #{$sm} {
       grid-template-columns: repeat(3, 1fr);
       padding: 2rem;
     }

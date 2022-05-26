@@ -4,7 +4,7 @@
   overflow: hidden;
   white-space: nowrap;
 
-  @media #{$tab-up} {
+  @media #{$sm} {
     height: 35.5rem;
   }
 
@@ -21,7 +21,9 @@
       color: white;
 
       h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        @media #{$sm} {font-size: 2rem;
+        }
       }
     }
 
