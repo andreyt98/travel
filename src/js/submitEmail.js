@@ -7,17 +7,14 @@ export const submitEmail = () => {
     // regular expression to validate email
     const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     
-    if (email.value == "") {
+    if (email.value == "" || !emailRegex.test(email.value)) {
         form.style.border = "1px solid red";
-        
         setTimeout(function () {
             form.style.border = "none";
         }, 2000);
-    }
-    
-    // if email is correct
-    if (emailRegex.test(email.value)) {
+        
+    }else{
         email.value = "";
-        banner.style.left = "0%";
+        banner.style.left = "0";
     }
 }

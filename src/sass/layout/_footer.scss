@@ -1,7 +1,7 @@
 // FOOTER
 .footer {
   position: relative;
-  padding: 2.5rem 1.5rem;
+  padding: 2rem 1.5rem;
   width: 100%;
   overflow: hidden;
   text-align: center;
@@ -20,6 +20,10 @@
     }
     padding: 1rem;
     border-bottom: 1px solid rgba(175, 175, 175, 0.219);
+
+    .column{
+      @include flex($direction: column, $gap: .7rem)
+    }
   }
 
   .subscribe-banner {
@@ -57,4 +61,5 @@
       padding: 0 1.5rem;
     }
   }
+  .creator{margin-top: 1rem;}
 }
