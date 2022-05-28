@@ -24,48 +24,44 @@ document.addEventListener("click", (e) => {
   //delegation 
 
   // prevent default of all buttons 
-  if (e.target.classList.contains("btn")) {
+  if (e.target.matches(".btn")) {
     e.preventDefault();
   }
 
   //show message of functionality still in process
-  if (e.target.id == "search-btn") {
+  if (e.target.matches(".search-form .btn-submit")) {
     search();
   }
 
   // scrollTo events
-  if (e.target.classList.contains("hotels-link")) {
+  if (e.target.matches(".hotels-link")) {
     scrollTo(e, hotelSection);
   }
-  if (e.target.classList.contains("tours-link")) {
+  if (e.target.matches(".tours-link")) {
     scrollTo(e, tourSection);
   }
-  if (e.target.classList.contains("more-link")) {
+  if (e.target.matches(".more-link")) {
     scrollTo(e, footerSection);
   }
   //----------------------------------
 
   //hide menu when clicking on a link (on mobile)
-  if (e.target.classList.contains("link")) {
+  if (e.target.matches(".link")) {
     document.querySelector('.nav').classList.remove("menu__active");
   }
 
   //show menu
-  if (e.target.classList.contains("nav__burger")) {
+  if (e.target.matches(".nav__burger")) {
     document.querySelector('.nav').classList.toggle("menu__active");
   }
 
   //close banner
-  if (e.target.classList.contains("xx")) {
+  if (e.target.matches(".xx")) {
     e.target.parentElement.style.left = "101%";
   }
 
   //show banner and message
-  if (e.target.classList.contains("btn-submit")) {
+  if (e.target.matches(".news-form .btn-submit")) {
     submitEmail();
-  }
-
-  if (e.target.classList.contains("heart")) {
-    e.target.classList.toggle("heart-clicked");
   }
 });
