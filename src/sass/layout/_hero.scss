@@ -25,7 +25,6 @@
     text-align: center;
     color: $white;
     font-size: 0.9rem;
-    overflow: hidden;
     @media #{$sm} {width: 70%;}
 
     h1 {
@@ -50,9 +49,9 @@
   .txt {
     text-align: center;
     margin-top: 1rem;
-    padding: 0.15rem;
+    padding: 0.25rem 1rem;
     background: $primary;
-    border-radius: 12px;
+    border-radius: 15px;
     color: $lightWhite;
     font-weight: 700;
   }
