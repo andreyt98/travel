@@ -39,9 +39,10 @@ li {
 }
 
 .hotels-section,.tours-section {
-  padding: 0 1rem ;
+  padding: 0 1.8rem ;
   margin: 1rem 0rem;
 }
+
 
 // anchor to the hotels page
 .more {
@@ -60,6 +61,7 @@ h1,
 h2,
 h3 {
   font-size: 1rem;
+  margin-block: 1rem;
 }
 
 img {
