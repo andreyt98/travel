@@ -2,11 +2,17 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  max-height: 320px; //this is aprox. the max width of the video
-
-  @media #{$sm} {max-height: 545px; //this is aprox. the max width of the video
+  height: auto;
+  background: url("/src/assets/img/hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  
+  height: 310px;
+  @media #{$md} {
+    height: 100vh;
+    background-position: top center;
   }
-  @media #{$md} {max-height: 640px;}
 
   .btn,.input {font-size: inherit;}
 
@@ -18,21 +24,22 @@
 
   // text header
   &__header {
-    @include flex($direction:column, $justify:space-between, $align:center, $gap:1rem);
-    @include position(absolute, $top: 30%, $left: 50%);
+    // @include flex($direction:column, $justify:space-between, $align:center, $gap:1rem);
+    @include position(absolute, $top:40%, $left: 50%);
     transform: translate(-50%);
     width: 85%;
     text-align: center;
     color: $white;
-    font-size: 0.9rem;
     @media #{$sm} {width: 70%;}
 
     h1 {
+      font-size: 1rem;
       @media #{$sm} {
         font-size: 1.6rem;
       }
     }
     .search-form{
+      display: none;
       @include flex($justify:space-between);
       background: $white 74%;
       border-radius: 15px;
@@ -54,29 +61,5 @@
     border-radius: 15px;
     color: $lightWhite;
     font-weight: 700;
-  }
-
-  &__actions {
-    @include flex($justify: space-around, $align:center, $gap: 1rem);
-  
-    .hero__actions--element {
-      background: #0332446e;
-      border-radius: 5px;
-      padding: 1rem;
-      margin-top: 1rem;
-
-      p {color: $lightWhite;}
-
-      a {
-        margin-top: 1rem;
-        color: $white;
-        transition: all 0.3s;
-        border-bottom: 1px solid #ffffff85;
-        &:hover {
-          transform: scale(1.1);
-          border-bottom: 1px solid $primary;
-        }
-      }
-    }
   }
 }
