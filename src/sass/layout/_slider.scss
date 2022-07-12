@@ -39,6 +39,7 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
+        
       }
     }
   }
@@ -52,6 +53,7 @@
     @include flex($justify: end, $align: center, $gap: 0.5rem);
     display: none;
     width: auto;
+    color: #a0aaaf;
     @media #{$md} {
       display: flex;
     }

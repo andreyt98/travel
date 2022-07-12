@@ -51,7 +51,7 @@ export const createHotelElements = () => {
     bookBtn.href = "#";
     bookBtn.textContent = "Book";
     // apending elements of hotel info to it
-    hotelInfo.append(hoteltitle, hotelPrice, hotelStars, bookBtn);
+    hotelInfo.append(hoteltitle, hotelPrice, hotelStars);
 
     //appending images and infoto parent div
     hotelCard.append(imgs, hotelInfo);
