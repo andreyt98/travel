@@ -1,19 +1,7 @@
 export const createTourElements = () => {
   // creation of hotel section content
 
-  const tourNames = [
-    "Snorkelling in the Maldives",
-    "Exploring Peru",
-    "Cruise the Antartic Peninsula",
-    "Wildlife of Africa",
-    "Treasures of Beijing",
-    "Central America Discovery",
-    "Float down the treasures of Egip",
-    "Camp under Findland lights",
-    "Landscape tent in Mongolia",
-    "Historical tour in Georgia",
-  ];
-
+ 
   const $sliderContainer = document.createElement("DIV");
   $sliderContainer.classList.add("slider-container");
   $sliderContainer.innerHTML = `
@@ -33,10 +21,7 @@ export const createTourElements = () => {
     $content.classList.add("content");
     $content.innerHTML = `
         <img src= ./assets/img/tours/tour-${i}.webp class="content-img"></img>
-          <div class="overlay-bg">
-            <p>${tourNames[i]}</p>
-            <p>$2000</p>
-          </div> 
+         
         `;
     $slider.append($content);
   }

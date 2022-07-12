@@ -1,5 +1,4 @@
 .slider-container {
-  // padding: 1rem 0.5rem;
   overflow-x: hidden;
   position: relative;
 
@@ -29,9 +28,11 @@
       border-radius: 12px;
       position: relative;
       overflow: hidden;
-      &:hover .overlay-bg {
-        opacity: 1;
-      }
+     div{
+      position: absolute;
+      left: 0;
+      top: 0;
+     }
 
       .content-img {
         width: 100%;
