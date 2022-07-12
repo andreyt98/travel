@@ -1,13 +1,14 @@
 export const createHotelElements = () => {
-  // creation of hotel section content
-  const hotelNamesObject1 = {
-    n1: "Jade Mountain, St. Lucia",
-    n2: "Canaves Oia Epitome, Greece",
-    n3: "St. Regis Bora Bora Resort, French Polynesia",
-    n4: "Astarte Suites Hotel, Greece",
-    n5: "Soneva Fushi, Maldives",
-    n6: "Mahekal Beach Resort, Playa del Carmen, Mexico",
-  };
+
+  const hotelNamesObject1 = [
+     "Jade Mountain, St. Lucia",
+     "Canaves Oia Epitome, Greece",
+     "Bora Bora Resort, French Polynesia",
+     "Astarte Suites Hotel, Greece",
+     "Soneva Fushi, Maldives",
+     "Mahekal Resort, Mexico",
+  ];
+
   const hotelGridContainer = document.querySelector(".hotel-grid");
   const DocumentFrag = document.createDocumentFragment();
   for (let i = 1; i <= 6; i++) {
