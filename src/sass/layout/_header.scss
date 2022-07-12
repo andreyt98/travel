@@ -2,7 +2,10 @@
   @include position(fixed, $top: 0);
   @include flex($justify: space-between, $align: center);
   width: 100%;
-  padding: 0.5rem 1.3rem;
+  padding: 0.2rem 1.3rem;
+  @media #{$sm} {
+    padding-block: 0.5rem
+  }
   z-index: 100;
   transition: background 0.7s;
 
@@ -15,7 +18,8 @@
     @include position(absolute, $top: 0rem, $right: 0);
     width: 0;
     height: 100vh;
-    background: linear-gradient(147deg, #153b64 0%, #224466 74%);
+    background: rgb(242,247,249);
+    background: linear-gradient(0deg, rgba(242,247,249,1) 0%, rgba(235,239,242,1) 100%);
     box-shadow: 5px 5px 10px 8px #00000052;
     transition: 0.3s;
     overflow-x: hidden;
@@ -38,7 +42,7 @@
     padding: 4rem 1rem;
     a {
       padding: 1rem 0;
-      color: $white;
+      color: $lightBlack;
       text-align: center;
       &:hover {
         color: $primary;
@@ -46,6 +50,7 @@
       @media #{$sm} {
         padding: 0;
         display: inline;
+        color: $white;
       }
     }
     li {
@@ -53,6 +58,7 @@
       text-align: center;
       @media #{$sm} {
         display: inline;
+
       }
     }
 

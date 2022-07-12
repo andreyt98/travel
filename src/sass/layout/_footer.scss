@@ -5,11 +5,11 @@
   width: 100%;
   overflow: hidden;
   text-align: center;
-  background: linear-gradient(147deg, #153b64 0%, #224466 74%);
-  color: $white;
+  background: rgb(242,247,249);
+  background: linear-gradient(0deg, #f2f7f9 0%, #ebeff2 100%);
+  color: $lightBlack;
   &__content {
-    a{color:$white}
-    h2{color: $primary;}
+    h2{color: $primary;margin: 0;}
     display: grid;
     grid-auto-flow: row;
     justify-content: space-around;
@@ -36,27 +36,28 @@
     height: 100%;
     padding: 5rem;
     transition: all 0.7s;
+    color: $white;
 
     .xx {
       @include position(absolute, $top: 1rem, $right: 1rem);
       cursor: pointer;
-      color: $white;
+      // color: $white;
       font-size: 120%;
       font-weight: 800;
     }
     h2,
     h3 {
-      color: $white;
       font-size: 120%;
     }
     h3 {font-weight: 400;}
   }
   .news-form{
     @include flex($justify:space-between);
-    background: #18334e 74%;
+    background: #d4e0e9 74%;
+    color: $white;
     border-radius: 15px;
     padding: 0;
-    input{width: 100%; padding: 0rem 0.7rem; background: none;color: $lightWhite;}
+    input{width: 100%; padding: 0rem 0.7rem; background: none;color: $lightBlack;}
     .btn-submit{
       padding: 0 1.5rem;
     }
