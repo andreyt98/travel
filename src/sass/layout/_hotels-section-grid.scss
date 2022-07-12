@@ -15,14 +15,20 @@
       border-radius: 15px;
       text-align: center;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 7px;
+      padding: 1rem;
+      
+      @media #{$sm}{
+        padding: 1rem;
+
+      }
 
       .stars {
         color: $orange;
-        font-size: 150%;
+        font-size: 90%;
       }
 
       img {
-        border-radius: 15px 15px 0 0;
+        border-radius: 15px ;
         width: 100%;
         object-fit: cover;
         object-position: center;
@@ -30,7 +36,7 @@
       }
 
       .hotel-info {
-        @include flex($direction: column,$justify: space-between, $align:center, $gap: 1rem);
+        @include flex($direction: column,$justify: space-between, $align:center, $gap: .7rem);
         padding: 0.7rem 0;
       }
     }
