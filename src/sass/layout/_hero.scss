@@ -2,17 +2,11 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: auto;
-  background: url("/src/assets/img/hero.png");
+  background: url("/src/assets/img/hero.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top center;
-  
-  height: 310px;
-  @media #{$md} {
-    height: 100vh;
-    background-position: top center;
-  }
+  background-position:   center;
+  height: 100vh;
 
   .btn,.input {font-size: inherit;}
 
@@ -30,12 +24,16 @@
     width: 85%;
     text-align: center;
     color: $white;
+    text-shadow: 3px 3px 8px black;
     @media #{$sm} {width: 70%;}
 
     h1 {
       font-size: 1rem;
       @media #{$sm} {
         font-size: 1.6rem;
+      }
+      @media #{$md} {
+        font-size: 2rem;
       }
     }
     .search-form{
