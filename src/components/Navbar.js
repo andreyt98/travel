@@ -5,9 +5,9 @@ nav.classList.add('nav')
 `
     <ul class="nav-list">
         <li><a href="#" class="link">Home</a></li>
-        <li><a href="#" class="link hotels-link">Home</a></li>
-        <li><a href="#" class="link tours-link">Home</a></li>
-        <li><a href="#" class="link more-link">Home</a></li>
+        <li><a href="#" class="link hotels-link">Hotels</a></li>
+        <li><a href="#" class="link tours-link">Tours</a></li>
+        <li><a href="#" class="link more-link">More</a></li>
     </ul>
 `
 
