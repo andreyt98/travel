@@ -22,28 +22,16 @@
     }
     i {
       font-size: 3rem;
-      margin-top: 1rem;
     }
   }
 
   .location {
-    svg {
-      width: 15%;
-      color: rgb(33, 197, 252);
-    }
+    i {color: #21c5fc;}
   }
-
   .locals {
-    svg {
-      width: 15%;
-      color: rgb(66, 224, 35);
-    }
+    i {color: #42e023;}
   }
-
   .price {
-   svg {
-     width: 15%;
-      color: rgb(255, 217, 0);
-    }
+   i {color: #ffd900;}
   }
 }
