@@ -6,16 +6,11 @@
   box-sizing: inherit;
 }
 
-.container{
-  transition: 0.3s;
-}
-
 html {
   @media #{$xxl} {
     font-size: 1.5rem;
   }
 }
-
 body {
   box-sizing: border-box;
   background-color: $lightWhite;
@@ -23,26 +18,22 @@ body {
   font-family: "Nunito", sans-serif;
   overflow-x: hidden;
 }
-
 a {
   display: inline-block;
   text-decoration: none;
   color: $lightBlack;
 }
-
 li {
   display: inline-block;
 }
-
 .white-space-no-wrap {
   white-space: nowrap;
 }
-
-.hotels-section,.tours-section {
-  padding: 0 1.8rem ;
+.hotels-section,
+.tours-section {
+  padding: 0 1.8rem;
   margin: 1rem 0rem;
 }
-
 
 // anchor to the hotels page
 .more {
