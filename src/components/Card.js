@@ -3,7 +3,7 @@ export const Card = (element,name) => {
     card.classList.add('hotel-card-grid')
     card.innerHTML=
 `   
-        <img src="../assets/img/hotels/hotel-${element}.webp" alt="hotel${element}" width="150" height="95" loading="lazy">
+        <img src="./assets/img/hotels/hotel-${element}.webp" alt="hotel${element}" width="150" height="95" loading="lazy">
         
         <div class="hotel-info">
             <p>${name}</p>

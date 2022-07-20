@@ -9,7 +9,7 @@ export const HelpSearchSection = () => {
         </div>
 
         <div class="image">
-            <img src="../assets/img/search-baner.webp" alt="penguin-picture" />
+            <img src="./assets/img/search-baner.webp" alt="penguin-picture" />
         </div>
 
         <div class="gradient-bg"></div>
