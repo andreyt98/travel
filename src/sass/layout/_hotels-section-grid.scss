@@ -1,28 +1,31 @@
 .hotels-section {
-  .more span { color: $primary;}
+  .more span {
+    color: $primary;
+  }
   .hotel-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(12rem,1fr));
-    @media #{$sm}{grid-template-columns: repeat(3,1fr);}
-    justify-content: center;   
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 0.85fr));
+    @media #{$md} {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    justify-content: center;
+    gap: 2.5rem;
     padding: 0.5rem;
 
     .hotel-card-grid {
-      display: grid;
-      grid-template-rows: repeat(2, auto);
+      display: flex;
+      flex-direction: column;
       border-radius: 15px;
       text-align: center;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 7px;
+      box-shadow: #00000059 0px 2px 7px;
       padding: 1rem;
       cursor: pointer;
       transition: all 0.3s;
-      &:hover{
-        box-shadow: rgba(0, 0, 0, 0.35) 4px 6px 25px;
+      &:hover {
+        box-shadow: #00000059 4px 6px 25px;
       }
-      @media #{$sm}{
+      @media #{$sm} {
         padding: 1rem;
-        
       }
 
       .stars {
@@ -31,15 +34,16 @@
       }
 
       img {
-        border-radius: 15px ;
+        border-radius: 15px;
         width: 100%;
+        @media #{$lg} {height: 60%;}
         object-fit: cover;
         object-position: center;
         transition: all 0.3s;
       }
 
       .hotel-info {
-        @include flex($direction: column,$justify: space-between, $align:center, $gap: .7rem);
+        @include flex($direction: column, $justify: space-between, $align: center, $gap: 0.7rem);
         padding: 0.7rem 0;
       }
     }
