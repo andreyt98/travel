@@ -1,3 +1,4 @@
+import { submitEmail } from "../helpers/submitEmail.js";
 export const Footer = () => {
   const footer = document.createElement("FOOTER");
   footer.classList.add("footer");
@@ -46,3 +47,16 @@ export const Footer = () => {
 
   return footer;
 };
+
+document.addEventListener("click", (e) => {
+  //close banner
+  if (e.target.matches(".xx")) {
+    e.target.parentElement.style.left = "101%";
+  }
+
+  //show banner and message
+  if (e.target.matches(".news-form .btn-submit")) {
+    submitEmail();
+  }
+});
+
