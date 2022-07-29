@@ -7,7 +7,7 @@
     padding-block: 0.5rem
   }
   z-index: 100;
-  transition: background 0.7s;
+  transition: all 0.7s;
 
   .logo {
     font-size: 140%;
@@ -92,7 +92,6 @@
 .hotels-header {
   background-color: $lightWhite;
   box-shadow: 5px 5px 10px 1px #00000052;
-
   .hotels-nav {
     a {
       @media #{$sm} {
@@ -109,8 +108,10 @@
 .active-scroll {
   background-color: $lightWhite;
   box-shadow: 5px 5px 10px 1px #00000052;
-
+  padding-block: 0;
+  
   @media #{$sm} {
+    padding-block: .5rem;
     .nav a {
       color: $lightBlack;
 
