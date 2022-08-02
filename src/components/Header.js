@@ -1,5 +1,5 @@
 import { Nav } from "./Navbar.js";
-import {scrollTo} from "../helpers/scrollTo.js";
+// import {scrollTo} from "../helpers/scrollTo.js";
 
 
 export const Header = () => {
@@ -24,15 +24,34 @@ window.addEventListener("scroll", () => {
 
 document.addEventListener("click", (e) => {
 
+
+
   // scrollTo events
+  if (e.target.matches(".nav-links").firstChild || e.target.matches(".logo") ) {
+    e.preventDefault();
+    
+    const sectionOne = document.getElementById("root").offsetTop - document.querySelector(".nav").offsetHeight - 40;
+    
+    window.scrollTo(0, sectionOne);
+  }
+
   if (e.target.matches(".hotels-link")) {
-    scrollTo(e, document.getElementById("section-one"));
+    e.preventDefault();
+    
+    const sectionOne = document.getElementById("section-one").offsetTop - document.querySelector(".nav").offsetHeight - 40;
+    
+    window.scrollTo(0, sectionOne);
   }
   if (e.target.matches(".tours-link")) {
-    scrollTo(e, document.getElementById("section-two"));
+    e.preventDefault();
+    const sectionTwo = document.getElementById("section-two").offsetTop - document.querySelector(".nav").offsetHeight - 20;
+    
+    window.scrollTo(0, sectionTwo);
   }
   if (e.target.matches(".more-link")) {
-    scrollTo(e, document.getElementById("section-three"));
+    e.preventDefault();
+    const sectionThree = document.getElementById("section-three").offsetTop - document.querySelector(".nav").offsetHeight;
+    window.scrollTo(0, sectionThree);
   }
 
   //hide menu when clicking on a link (on mobile)
