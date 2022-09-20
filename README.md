@@ -1,5 +1,5 @@
 
-# Frontend for a ficticious booking hotels and tours page
+# Frontend for a fictitious booking hotels and tours page
 
 This was my first project uploaded to Github, my focus at the time was to practice the main concepts of SASS, and responsive web design.
 It had a slider made with SwiperJS, until i find out about scroll-snap-type, so i made my own 'native' slider.
